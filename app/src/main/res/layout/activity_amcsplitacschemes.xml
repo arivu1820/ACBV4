@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <VideoView
+                android:id="@+id/video"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="205dp"
+                android:fontFamily="@font/metropolis"
+                android:gravity="center"
+                android:text="Split AC"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainparent_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="260dp"
+                android:layout_marginBottom="75dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mainparent_constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scheme1_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scheme1_defaultcardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:id="@+id/scheme1_titletxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:text="Scheme 1"
+                                android:textColor="@color/black"
+                                android:textSize="30dp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/metropolis"
+                                />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/scheme1_dropdownconstraint"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:elevation="0dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/scheme1_withsparecardview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardElevation="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/scheme1_withoutsparecardview"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/scheme1_withsparetxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/metropolis"
+                                        android:gravity="center_horizontal"
+                                        android:text="With Spare"
+                                        android:textSize="20dp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme1_withspareaddbtn_cardview1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="visible"
+                                        app:cardCornerRadius="25dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent">
+
+                                        <Button
+                                            android:id="@+id/scheme1_withspareaddbtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/add_btn_shape"
+                                            android:backgroundTint="#EC165F"
+                                            android:fontFamily="@font/metropolis"
+                                            android:text="ADD"
+                                            android:textColor="@color/white"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="TouchTargetSizeCheck" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme1_withspareaddbtn_cardview2"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="invisible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/scheme1_withsparesubbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                            <TextView
+                                                android:id="@+id/scheme1_withsparecount"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+                                            <Button
+                                                android:id="@+id/scheme1_withspareplusbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="+"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                        </LinearLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/scheme1_withoutsparecardview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible"
+                                    app:cardElevation="0dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/scheme1_withsparecardview"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/scheme1_withsparecardview">
+
+                                    <TextView
+                                        android:id="@+id/scheme1_withoutsparetxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/metropolis"
+                                        android:gravity="center_horizontal"
+                                        android:text="Without Spare"
+                                        android:textSize="20dp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme1_withoutspareaddbtn_cardview1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="visible"
+                                        app:cardCornerRadius="25dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent">
+
+                                        <Button
+                                            android:id="@+id/scheme1_withoutspareaddbtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/add_btn_shape"
+                                            android:backgroundTint="#EC165F"
+                                            android:fontFamily="@font/metropolis"
+                                            android:text="ADD"
+                                            android:textColor="@color/white"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="TouchTargetSizeCheck" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme1_withoutspareaddbtn_cardview2"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="invisible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/scheme1_withoutsparesubbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                            <TextView
+                                                android:id="@+id/scheme1_withoutsparecount"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+                                            <Button
+                                                android:id="@+id/scheme1_withoutspareplusbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="+"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+                                        </LinearLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scheme1_dropdowncardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            android:visibility="gone"
+                            app:cardElevation="0dp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="BENEFITS"
+                                    android:textColor="#000"
+                                    android:textSize="25dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Customizable Service Dates"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4 - Services For A Year (3 - Months Once)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="All Services Are General Service"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Filter Cleaning"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Indoor Coil Washing With Pressure Pump"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Adding Fragrance To The Indoor"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Outdoor Coil (External Side) And Fan Washing With Pressure Pump"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gas Checking"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anti Viral Spray (Optional,Extra Rs.70/-)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Replacement Of Any Defective Part Of AC(Only For Spare Subscription)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scheme2_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/scheme1_cardview">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scheme2_defaultcardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp">
+
+
+                            <TextView
+                                android:id="@+id/scheme2_titletxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Scheme 2"
+                                android:textColor="@color/black"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/scheme2_dropdownconstraint"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:elevation="0dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/scheme2_withsparecardview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardElevation="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/scheme2_withoutsparecardview"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/scheme2_withsparetxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/metropolis"
+                                        android:gravity="center_horizontal"
+                                        android:text="With Spare"
+                                        android:textSize="20dp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme2_withspareaddbtn_cardview1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="visible"
+                                        app:cardCornerRadius="25dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent">
+
+                                        <Button
+                                            android:id="@+id/scheme2_withspareaddbtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/add_btn_shape"
+                                            android:backgroundTint="#EC165F"
+                                            android:fontFamily="@font/metropolis"
+                                            android:text="ADD"
+                                            android:textColor="@color/white"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="TouchTargetSizeCheck" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme2_withspareaddbtn_cardview2"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="invisible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/scheme2_withsparesubbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                            <TextView
+                                                android:id="@+id/scheme2_withsparecount"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+                                            <Button
+                                                android:id="@+id/scheme2_withspareplusbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="+"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                        </LinearLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/scheme2_withoutsparecardview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible"
+                                    app:cardElevation="0dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/scheme2_withsparecardview"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/scheme2_withsparecardview">
+
+                                    <TextView
+                                        android:id="@+id/scheme2_withoutsparetxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/metropolis"
+                                        android:gravity="center_horizontal"
+                                        android:text="Without Spare"
+                                        android:textSize="20dp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme2_withoutspareaddbtn_cardview1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="visible"
+                                        app:cardCornerRadius="25dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent">
+
+                                        <Button
+                                            android:id="@+id/scheme2_withoutspareaddbtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/add_btn_shape"
+                                            android:backgroundTint="#EC165F"
+                                            android:fontFamily="@font/metropolis"
+                                            android:text="ADD"
+                                            android:textColor="@color/white"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="TouchTargetSizeCheck" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme2_withoutspareaddbtn_cardview2"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="invisible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/scheme2_withoutsparesubbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                            <TextView
+                                                android:id="@+id/scheme2_withoutsparecount"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+                                            <Button
+                                                android:id="@+id/scheme2_withoutspareplusbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="+"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+                                        </LinearLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scheme2_dropdowncardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            android:visibility="gone"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="BENEFITS"
+                                    android:textColor="#000"
+                                    android:textSize="25dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Customizable Service Dates"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4 - Services For A Year (3 - Months Once)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="3 - General Service And 1 - 360degree Water Wash"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Blower Cleaning"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Filter Cleaning"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Indoor Coil Washing With Pressure Pump"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Adding Fragrance To The Indoor"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Outdoor Coil (External Side) And Fan Washing With Pressure Pump"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gas Checking"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anti Viral Spray (Optional,Extra Rs.70/-)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Replacement Of Any Defective Part Of AC(Only For Spare Subscription)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scheme3_cardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/scheme2_cardview">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scheme3_defaultcardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp">
+
+                            <TextView
+                                android:id="@+id/scheme3_titletxt"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Scheme 3"
+                                android:textColor="@color/black"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/scheme3_dropdownconstraint"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:elevation="0dp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/scheme3_withsparecardview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:cardElevation="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/scheme3_withoutsparecardview"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toStartOf="parent">
+
+                                    <TextView
+                                        android:id="@+id/scheme3_withsparetxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/metropolis"
+                                        android:gravity="center_horizontal"
+                                        android:text="With Spare"
+                                        android:textSize="20dp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme3_withspareaddbtn_cardview1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="visible"
+                                        app:cardCornerRadius="25dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent">
+
+                                        <Button
+                                            android:id="@+id/scheme3_withspareaddbtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/add_btn_shape"
+                                            android:backgroundTint="#EC165F"
+                                            android:fontFamily="@font/metropolis"
+                                            android:text="ADD"
+                                            android:textColor="@color/white"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="TouchTargetSizeCheck" />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme3_withspareaddbtn_cardview2"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="invisible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/scheme3_withsparesubbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                            <TextView
+                                                android:id="@+id/scheme3_withsparecount"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+                                            <Button
+                                                android:id="@+id/scheme3_withspareplusbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="+"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                        </LinearLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/scheme3_withoutsparecardview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible"
+                                    app:cardElevation="0dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/scheme3_withsparecardview"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/scheme3_withsparecardview">
+
+                                    <TextView
+                                        android:id="@+id/scheme3_withoutsparetxt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/metropolis"
+                                        android:gravity="center_horizontal"
+                                        android:text="Without Spare"
+                                        android:textSize="20dp" />
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme3_withoutspareaddbtn_cardview1"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="visible"
+                                        app:cardCornerRadius="25dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent">
+
+                                        <Button
+                                            android:id="@+id/scheme3_withoutspareaddbtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/add_btn_shape"
+                                            android:backgroundTint="#EC165F"
+                                            android:fontFamily="@font/metropolis"
+                                            android:text="ADD"
+                                            android:textColor="@color/white"
+                                            android:textSize="18dp"
+                                            android:textStyle="bold"
+                                            tools:ignore="TouchTargetSizeCheck" />
+
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:id="@+id/scheme3_withoutspareaddbtn_cardview2"
+                                        android:layout_width="80dp"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="50dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:visibility="invisible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="horizontal">
+
+                                            <Button
+                                                android:id="@+id/scheme3_withoutsparesubbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="-"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                            <TextView
+                                                android:id="@+id/scheme3_withoutsparecount"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+                                            <Button
+                                                android:id="@+id/scheme3_withoutspareplusbtn"
+                                                android:layout_width="26.66dp"
+                                                android:layout_height="match_parent"
+                                                android:background="#FFEC165F"
+                                                android:gravity="center"
+                                                android:text="+"
+                                                android:textColor="@color/white"
+                                                android:textSize="30dp" />
+
+                                        </LinearLayout>
+
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/scheme3_dropdowncardview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="200dp"
+                            android:visibility="gone"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:gravity="center_horizontal"
+                                    android:text="BENEFITS"
+                                    android:textColor="#000"
+                                    android:textSize="25dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Customizable Service Dates"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="5 - Services For A Year (2 - Months Once)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="3 - General Service, 1 - Single Side Water Wash And 1 - 360degree"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Blower Cleaning"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Filter Cleaning"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Indoor Coil Washing With Pressure Pump"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Adding Fragrance To The Indoor"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Outdoor Coil (External Side) And Fan Washing With Pressure Pump"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Gas Checking"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Anti Viral Spray (Optional,Extra Rs.70/-)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Replacement Of Any Defective Part Of AC(Only For Spare Subscription)"
+                                    android:textColor="#808080"
+                                    android:textSize="15dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:text="Total Items  "
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtitems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txtitems"
+                    android:gravity="center"
+                    android:text=" |"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt2"
+                    android:gravity="center"
+                    android:text="  ₹"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/txt3"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cartt"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="VIEW CART"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <!--    <FrameLayout-->
+    <!--        android:visibility="visible"-->
+    <!--        android:id="@+id/frontloadingpage"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@color/white">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <ProgressBar-->
+    <!--                android:visibility="gone"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                android:indeterminateTint="@color/black"/>-->
+
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    </FrameLayout>-->
+
+</RelativeLayout>

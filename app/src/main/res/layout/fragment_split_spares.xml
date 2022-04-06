@@ -1,0 +1,1994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/split_total_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_capacitor1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_capacitor1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                                app:layout_constraintStart_toStartOf="@+id/imageView4">
+
+                                <Button
+                                    android:id="@+id/capacitorbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_capacitor2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_capacitor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_capacitor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_capacitor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_capacitor1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subcapacitor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtcapacitor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addcapacitor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/capacitorprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_capacitor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_capacitor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_capacitor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_capacitor1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_capacitor_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_capacitor_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_capacitor_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_capacitor" />
+
+                            <ImageView
+                                android:id="@+id/imageView_capacitor"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginTop="60dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_capacitor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_capacitor"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_capacitor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_capacitor" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_capacitor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_capacitor"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_capacitor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_capacitor" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topiccapacitor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="CAPACITOR"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_blower1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_blower1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                                app:layout_constraintStart_toStartOf="@+id/imageView5">
+
+                                <Button
+                                    android:id="@+id/blowerbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_blower2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_blower1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_blower1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_blower1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_blower1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subblower"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtblower"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addblower"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/blowerprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_blower1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_blower1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_blower1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_blower1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_blower"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_blower_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_blower_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_blower_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_blower" />
+
+                            <ImageView
+                                android:id="@+id/imageView_blower"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_blower"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_blower"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_blower"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_blower" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_blower"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_blower"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_blower"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_blower" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicblower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="BLOWER"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_outdoorfan1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoorfan1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                                app:layout_constraintStart_toStartOf="@+id/imageView6">
+
+                                <Button
+                                    android:id="@+id/outdoorfanbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoorfan2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoorfan1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoorfan1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoorfan1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoorfan1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/suboutdoorfan"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtoutdoorfan"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addoutdoorfan"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/outdoorfanprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoorfan1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoorfan1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoorfan1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoorfan1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_outdoorfan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoorfan_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorfan_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoorfan_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_outdoorfan" />
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoorfan"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginTop="60dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_outdoorfan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoorfan"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoorfan"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorfan" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_outdoorfan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoorfan"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_outdoorfan"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorfan" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicoutdoorfan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="OUTDOOR FAN"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_indoormotor1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_indoormotor1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                                app:layout_constraintStart_toStartOf="@+id/imageView7">
+
+                                <Button
+                                    android:id="@+id/indoormotorbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_indoormotor2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_indoormotor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_indoormotor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_indoormotor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_indoormotor1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subindoormotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtindoormotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addindoormotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/indoormotorprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_indoormotor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_indoormotor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_indoormotor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_indoormotor1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_indoormotor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_indoormotor_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoormotor_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_indoormotor_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_indoormotor" />
+
+                            <ImageView
+                                android:id="@+id/imageView_indoormotor"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_indoormotor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_indoormotor"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_indoormotor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoormotor" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_indoormotor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_indoormotor"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_indoormotor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoormotor" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicindoormotor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="INDOOR MOTOR"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_outdoormotor1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoormotor1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                                app:layout_constraintStart_toStartOf="@+id/imageView8">
+
+                                <Button
+                                    android:id="@+id/outdoormotorbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoormotor2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoormotor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoormotor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoormotor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoormotor1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/suboutdoormotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtoutdoormotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addoutdoormotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/outdoormotorprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoormotor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoormotor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoormotor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoormotor1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_outdoormotor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoormotor_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoormotor_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoormotor_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_outdoormotor" />
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoormotor"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginTop="60dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_outdoormotor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoormotor"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoormotor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoormotor" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_outdoormotor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoormotor"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_outdoormotor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoormotor" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicoutdoormotor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="OUTDOOR MOTOR"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_swingmotor1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_swingmotor1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                                app:layout_constraintStart_toStartOf="@+id/imageView9">
+
+                                <Button
+                                    android:id="@+id/swingmotorbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_swingmotor2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_swingmotor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_swingmotor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_swingmotor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_swingmotor1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subswingmotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtswingmotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addswingmotor"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/swingmotorprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_swingmotor1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_swingmotor1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_swingmotor1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_swingmotor1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_swingmotor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_swingmotor_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_swingmotor_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_swingmotor_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_swingmotor" />
+
+                            <ImageView
+                                android:id="@+id/imageView_swingmotor"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_swingmotor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_swingmotor"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_swingmotor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_swingmotor" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_swingmotor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_swingmotor"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_swingmotor"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_swingmotor" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicswingmotor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="SWING MOTOR"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview6"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_indoorcoil1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                                app:layout_constraintStart_toStartOf="@+id/imageView10">
+
+                                <Button
+                                    android:id="@+id/indoorcoilbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_indoorcoil2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_indoorcoil1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subindoorcoil"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtindoorcoil"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addindoorcoil"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/indoorcoilprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_indoorcoil1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_indoorcoil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="130dp"
+                                android:layout_marginLeft="45dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_indoorcoil_bookmark"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_indoorcoil_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoorcoil_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_indoorcoil_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_indoorcoil" />
+
+                            <ImageView
+                                android:id="@+id/imageView_indoorcoil"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_indoorcoil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_indoorcoil"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_indoorcoil"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoorcoil" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_indoorcoil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_indoorcoil"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_indoorcoil"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoorcoil" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicindoorcoil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="INDOOR COIL"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview6"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoorcondenser1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                                app:layout_constraintStart_toStartOf="@+id/imageView11">
+
+                                <Button
+                                    android:id="@+id/outdoorcondenserbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoorcondenser2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoorcondenser1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/suboutdoorcondenser"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtoutdoorcondenser"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addoutdoorcondenser"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/outdoorcondenserprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoorcondenser1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_outdoorcondenser"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoorcondenser_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorcondenser_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoorcondenser_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_outdoorcondenser" />
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoorcondenser"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginTop="70dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_outdoorcondenser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoorcondenser"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoorcondenser"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorcondenser" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_outdoorcondenser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoorcondenser"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_outdoorcondenser"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorcondenser" />
+
+                            <TextView
+                                android:id="@+id/topicoutdoorcondenser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="OUTDOOR \nCONDENSER"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview8"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView12"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_swingflap1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_swingflap1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView12"
+                                app:layout_constraintStart_toStartOf="@+id/imageView12">
+
+                                <Button
+                                    android:id="@+id/swingflapbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_swingflap2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_swingflap1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_swingflap1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_swingflap1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_swingflap1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subswingflap"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtswingflap"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addswingflap"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/swingflapprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_swingflap1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_swingflap1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_swingflap1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_swingflap1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_description_swingflap"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_swingflap_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_swingflap_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_swingflap_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_swingflap" />
+
+                            <ImageView
+                                android:id="@+id/imageView_swingflap"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_swingflap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_swingflap"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_swingflap"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_swingflap" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_swingflap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_swingflap"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_swingflap"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_swingflap" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicswingflap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:text="SWING FLAP"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview9"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="90dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <TextView
+                                android:id="@+id/txt_description_remote"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_remote_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_remote_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_remote_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginLeft="16dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_remote" />
+
+                            <ImageView
+                                android:id="@+id/imageView13"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_remote1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_margin="15dp"/>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_remote1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView13"
+                                app:layout_constraintStart_toStartOf="@+id/imageView13">
+
+                                <Button
+                                    android:id="@+id/remotebtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_remote2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_remote1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_remote1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_remote1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_remote1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subremote"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtremote"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addremote"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/remoteprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_remote1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_remote1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_remote1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_remote1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <ImageView
+                                android:id="@+id/imageView_remote"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_remote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_remote"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_remote"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_remote" />
+
+                            <TextView
+                                android:id="@+id/txt_originalprice_remote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_remote"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_remote"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_remote" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicremote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:text="REMOTE"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

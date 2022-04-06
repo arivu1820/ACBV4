@@ -1,0 +1,595 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cassette_inun_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/main_page_cassette_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/cassette_install_dialog_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cassette_install_addbtn_cardview1"
+                            android:layout_width="80dp"
+                            android:layout_height="42dp"
+                            android:elevation="0dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="25dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.85"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.75">
+
+                            <Button
+                                android:id="@+id/cassette_install_addbutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:background="#FFEC165F"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck"
+                                android:fontFamily="@font/metropolis"/>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cassette_install_pmt_cardview2"
+                            android:layout_width="80dp"
+                            android:layout_height="42dp"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/cassette_install_addbtn_cardview1"
+                            app:layout_constraintEnd_toEndOf="@+id/cassette_install_addbtn_cardview1"
+                            app:layout_constraintStart_toStartOf="@+id/cassette_install_addbtn_cardview1"
+                            app:layout_constraintTop_toTopOf="@+id/cassette_install_addbtn_cardview1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/cassette_install_minusbtn"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFEC165F"
+                                    android:padding="0dp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+
+                                <TextView
+                                    android:id="@+id/cassette_install_txt"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:background="#FFEC165F"/>
+
+                                <Button
+
+                                    android:id="@+id/cassette_install_plusbtn"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFEC165F"
+                                    android:padding="0dp"
+                                    android:gravity="center"
+                                    android:text="+"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:id="@+id/cassette_install_progressbar"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cassette_install_addbtn_cardview1"
+                            app:layout_constraintEnd_toEndOf="@+id/cassette_install_addbtn_cardview1"
+                            app:layout_constraintStart_toStartOf="@+id/cassette_install_addbtn_cardview1"
+                            app:layout_constraintTop_toTopOf="@+id/cassette_install_addbtn_cardview1"
+                            android:backgroundTint="#EC165F">
+
+                            <ProgressBar
+                                android:visibility="visible"
+                                android:indeterminateTint="@color/white"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/txt_install_cassetteac"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginRight="150dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_install_cassetteac_bookmark"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_install_cassetteac_bookmark" />
+
+                        <ImageView
+                            android:id="@+id/imageView_install_cassetteac_bookmark"
+                            android:layout_width="22dp"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/ic_baseline_bookmark_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_install_cassetteac" />
+
+                        <ImageView
+                            android:id="@+id/imageView_install_cassetteac"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/indian_currency"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_discount_price_install_cassetteac"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="4̶9̶9̶"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_install_cassetteac"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_install_cassetteac"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_install_cassetteac" />
+
+                        <TextView
+                            android:id="@+id/txt_originalprice_install_cassetteac"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="399"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_install_cassetteac"
+                            app:layout_constraintStart_toEndOf="@+id/txt_discount_price_install_cassetteac"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_install_cassetteac" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/cassette_install_titletxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="13dp"
+                        android:text="INSTALLATION"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/metropolis"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/cassette_uninstall_dialog_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/cassette_install_dialog_cardview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cassette_uninstall_addbtn_cardview1"
+                            android:layout_width="80dp"
+                            android:layout_height="42dp"
+                            android:elevation="0dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="25dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.85"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.75">
+
+                            <Button
+                                android:id="@+id/cassette_uninstall_addbutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="42dp"
+                                android:background="#FFEC165F"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck"
+                                android:fontFamily="@font/metropolis"/>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cassette_uninstall_pmt_cardview2"
+                            android:layout_width="80dp"
+                            android:layout_height="42dp"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/cassette_uninstall_addbtn_cardview1"
+                            app:layout_constraintEnd_toEndOf="@+id/cassette_uninstall_addbtn_cardview1"
+                            app:layout_constraintStart_toStartOf="@+id/cassette_uninstall_addbtn_cardview1"
+                            app:layout_constraintTop_toTopOf="@+id/cassette_uninstall_addbtn_cardview1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/cassette_uninstall_minusbtn"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFEC165F"
+                                    android:padding="0dp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+
+                                <TextView
+                                    android:id="@+id/cassette_uninstall_txt"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:background="#FFEC165F" />
+
+                                <Button
+
+                                    android:id="@+id/cassette_uninstall_plusbtn"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFEC165F"
+                                    android:padding="0dp"
+                                    android:gravity="center"
+                                    android:text="+"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:id="@+id/cassette_uninstall_progressbar"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cassette_uninstall_addbtn_cardview1"
+                            app:layout_constraintEnd_toEndOf="@+id/cassette_uninstall_addbtn_cardview1"
+                            app:layout_constraintStart_toStartOf="@+id/cassette_uninstall_addbtn_cardview1"
+                            app:layout_constraintTop_toTopOf="@+id/cassette_uninstall_addbtn_cardview1"
+                            android:backgroundTint="#EC165F">
+
+                            <ProgressBar
+                                android:visibility="visible"
+                                android:indeterminateTint="@color/white"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/txt_uninstall"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginRight="130dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_uninstall_bookmark"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_uninstall_bookmark" />
+
+                        <ImageView
+                            android:id="@+id/imageView_uninstall_bookmark"
+                            android:layout_width="22dp"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/ic_baseline_bookmark_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_uninstall" />
+
+                        <ImageView
+                            android:id="@+id/imageView_uninstall"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/indian_currency"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_discount_price_uninstall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="4̶9̶9̶"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_uninstall"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_uninstall"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_uninstall" />
+
+                        <TextView
+                            android:id="@+id/txt_originalprice_uninstall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="399"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_uninstall"
+                            app:layout_constraintStart_toEndOf="@+id/txt_discount_price_uninstall"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_uninstall" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                    <TextView
+                        android:id="@+id/cassette_uninstall_titletxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="13dp"
+                        android:text="UN-INSTALLATION"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/metropolis"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/cassette_combo_dialog_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@+id/cassette_uninstall_dialog_cardview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="5dp"
+                    android:layout_marginBottom="70dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cassette_combo_addbtn_cardview1"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            android:elevation="0dp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="25dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.85"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.75">
+
+                            <Button
+                                android:id="@+id/cassette_combo_addbutton"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="#FFEC165F"
+                                android:text="ADD"
+                                android:textColor="@color/white"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                tools:ignore="TouchTargetSizeCheck"
+                                android:fontFamily="@font/metropolis"/>
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cassette_combo_pmt_cardview2"
+                            android:layout_width="80dp"
+                            android:layout_height="42dp"
+                            android:visibility="invisible"
+                            app:layout_constraintBottom_toBottomOf="@+id/cassette_combo_addbtn_cardview1"
+                            app:layout_constraintEnd_toEndOf="@+id/cassette_combo_addbtn_cardview1"
+                            app:layout_constraintStart_toStartOf="@+id/cassette_combo_addbtn_cardview1"
+                            app:layout_constraintTop_toTopOf="@+id/cassette_combo_addbtn_cardview1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/cassette_combo_minusbtn"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFEC165F"
+                                    android:padding="0dp"
+                                    android:gravity="center"
+                                    android:text="-"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+
+                                <TextView
+                                    android:id="@+id/cassette_combo_txt"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    android:background="#FFEC165F" />
+
+                                <Button
+
+                                    android:id="@+id/cassette_combo_plusbtn"
+                                    android:layout_width="26.66dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#FFEC165F"
+                                    android:padding="0dp"
+                                    android:gravity="center"
+                                    android:text="+"
+                                    android:textColor="@color/white"
+                                    android:textSize="20sp"/>
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:visibility="invisible"
+                            android:id="@+id/cassette_combo_progressbar"
+                            android:layout_width="80dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/cassette_combo_addbtn_cardview1"
+                            app:layout_constraintEnd_toEndOf="@+id/cassette_combo_addbtn_cardview1"
+                            app:layout_constraintStart_toStartOf="@+id/cassette_combo_addbtn_cardview1"
+                            app:layout_constraintTop_toTopOf="@+id/cassette_combo_addbtn_cardview1"
+                            android:backgroundTint="#EC165F">
+
+                            <ProgressBar
+                                android:visibility="visible"
+                                android:indeterminateTint="@color/white"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/txt_combo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="45dp"
+                            android:layout_marginRight="130dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_combo_bookmark"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_combo_bookmark" />
+
+                        <ImageView
+                            android:id="@+id/imageView_combo_bookmark"
+                            android:layout_width="22dp"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="18dp"
+                            android:src="@drawable/ic_baseline_bookmark_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView_combo" />
+
+                        <ImageView
+                            android:id="@+id/imageView_combo"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginTop="60dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/indian_currency"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_discount_price_combo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="4̶9̶9̶"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_combo"
+                            app:layout_constraintStart_toEndOf="@+id/imageView_combo"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_combo" />
+
+                        <TextView
+                            android:id="@+id/txt_originalprice_capacitor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="399"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView_combo"
+                            app:layout_constraintStart_toEndOf="@+id/txt_discount_price_combo"
+                            app:layout_constraintTop_toTopOf="@+id/imageView_combo" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/cassette_combo_titletxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="13dp"
+                        android:text="COMBO"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/metropolis"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

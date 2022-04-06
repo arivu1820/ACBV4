@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".splitac_scheme2_withspare_bsd"
+    android:background="@drawable/bottomsheet">
+
+
+    <RelativeLayout
+        android:id="@+id/scheme2_withsparedialogbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ScrollView
+            android:id="@+id/scheme2_withspare_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/scheme2_withspare_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/scheme2_withspare_framelayout1"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <TextView
+                        android:id="@+id/scheme2_withspare_titletxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Total Spares"
+                        android:fontFamily="@font/iceberg"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:id="@+id/scheme2_withspare_linearlayout"
+                        android:layout_marginTop="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Capacitor (BOTH IN AND OUTDOOR)"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Coil and Condenser"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Compressor"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Swing Motor"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣PC-Board"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Remote"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Gas Leak"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Blower and Fan"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+
+                    </LinearLayout>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scheme2_withspare_totalspare_cardview1"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:visibility="visible"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="100dp">
+
+                        <Button
+                            android:id="@+id/scheme2_withspare_totalspare_addbtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/add_btn_shape"
+                            android:backgroundTint="#EC165F"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scheme2_withspare_totalspare_cardview2"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        app:cardElevation="0dp"
+                        android:visibility="invisible"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="100dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/scheme2_withspare_totalspare_subbtn"
+                                android:layout_width="26.66dp"
+                                android:layout_height="match_parent"
+                                android:background="#FFEC165F"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/white"
+                                android:textSize="30dp"/>
+
+                            <TextView
+                                android:id="@+id/scheme2_withspare_totalspare_counttxt"
+                                android:layout_width="26.66dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:background="#FFEC165F"/>
+
+                            <Button
+                                android:id="@+id/scheme2_withspare_totalspare_plusbtn"
+                                android:layout_width="26.66dp"
+                                android:layout_height="match_parent"
+                                android:background="#FFEC165F"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/white"
+                                android:textSize="30dp"/>
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="invisible"
+                        android:id="@+id/scheme2_withspare_totalspare_progressbar"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="100dp"
+                        android:backgroundTint="#EC165F">
+
+                        <ProgressBar
+                            android:visibility="visible"
+                            android:indeterminateTint="@color/white"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_marginTop="310dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginBottom="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="Limited Spares"
+                        android:fontFamily="@font/iceberg"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Capacitor (BOTH IN AND OUTDOOR)"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣PC-Board"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Remote"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="   ‣Gas Leak"
+                            android:textColor="#808080"
+                            android:textStyle="bold"
+                            android:textSize="15dp"/>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scheme2_withspare_limitedspare_cardview1"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        app:cardElevation="0dp"
+                        android:visibility="visible"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="100dp">
+
+                        <Button
+                            android:id="@+id/scheme2_withspare_limitedspare_addbtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/add_btn_shape"
+                            android:backgroundTint="#EC165F"
+                            android:text="ADD"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/scheme2_withspare_limitedspare_cardview2"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        app:cardElevation="0dp"
+                        android:visibility="invisible"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="100dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/scheme2_withspare_limitedspare_subbtn"
+                                android:layout_width="26.66dp"
+                                android:layout_height="match_parent"
+                                android:background="#FFEC165F"
+                                android:gravity="center"
+                                android:text="-"
+                                android:textColor="@color/white"
+                                android:textSize="30dp"/>
+
+                            <TextView
+                                android:id="@+id/scheme2_withspare_limitedspare_counttxt"
+                                android:layout_width="26.66dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:background="#FFEC165F"/>
+
+                            <Button
+                                android:id="@+id/scheme2_withspare_limitedspare_plusbtn"
+                                android:layout_width="26.66dp"
+                                android:layout_height="match_parent"
+                                android:background="#FFEC165F"
+                                android:gravity="center"
+                                android:text="+"
+                                android:textColor="@color/white"
+                                android:textSize="30dp"/>
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:visibility="invisible"
+                        android:id="@+id/scheme2_withspare_limitedspare_progressbar"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        app:cardElevation="0dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="100dp"
+                        android:backgroundTint="#EC165F">
+
+                        <ProgressBar
+                            android:visibility="visible"
+                            android:indeterminateTint="@color/white"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="invisible"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/purple">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:text="Total Items  "
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtitems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txtitems"
+                    android:gravity="center"
+                    android:text=" |"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt2"
+                    android:gravity="center"
+                    android:text="  ₹"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/txt3"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cart"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="VIEW CART"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

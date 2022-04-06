@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/home"
+        android:iconTintMode="@color/purple"
+        android:iconTint="@color/black"/>
+    <item android:title="My Orders"
+        android:icon="@drawable/ic_baseline_library_books_24"
+        android:id="@+id/myorders"
+        android:iconTint="@color/purple"/>
+    <item android:title="About ACB"
+        android:icon="@drawable/splashimage1"
+        android:id="@+id/aboutACB"
+        android:iconTint="@color/purple" />
+    <item android:title="AMC Subscription"
+        android:icon="@drawable/ic_baseline_event_note_24"
+        android:id="@+id/amc_subscription"
+        android:iconTint="@color/purple"/>
+    <item android:title="My Profile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:id="@+id/myprofile"
+        android:iconTint="@color/purple"/>
+
+
+
+</menu>

@@ -1,0 +1,392 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="ACB Blogs"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintBottom_toTopOf="@+id/cardview1"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="Video Reviews"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/v1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:backgroundTint="#ECECEC">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <VideoView
+                                    android:id="@+id/video1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginBottom="20dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/video1"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="All services are doneviddddces are done by well_trained professionalAll services are done by well_trained professionalAll services are done by well_trained professional All services are done by well_trained professionalAll services are done by well_trained professional" />
+
+                            </RelativeLayout>
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/v2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/v1"
+                            android:background="@color/white"
+                            android:backgroundTint="#ECECEC">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <VideoView
+                                    android:id="@+id/video2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginRight="30dp"
+                                    android:layout_marginBottom="20dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/video2"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="All services are doneviddddces are done by well_trained professionalAll services are done by well_trained professionalAll services are done by well_trained professional All services are done by well_trained professionalAll services are done by well_trained professional" />
+
+                            </RelativeLayout>
+
+
+                        </FrameLayout>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                ///////////////////
+
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:id="@+id/cardview2"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toBottomOf="parent">-->
+
+                <!--                    <RelativeLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent">-->
+
+                <!--                        <TextView-->
+                <!--                            android:backgroundTint="@color/black"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:text="Genearl Review"-->
+                <!--                            android:textColor="#808080"-->
+                <!--                            android:textSize="20dp"-->
+                <!--                            android:textStyle="bold" />-->
+
+
+                <!--                        &lt;!&ndash;                        <RatingBar&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:id="@+id/ratingbar"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            style="?android:ratingBarStyleSmall"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginStart="40dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:rating="5"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:stepSize="1"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/textView7" />&ndash;&gt;-->
+
+                <!--                        &lt;!&ndash;                        <TextView&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:id="@+id/textView"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginStart="58dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:fontFamily="@font/metropolis"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:text="36,062"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:textColor="@color/black"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:textSize="20sp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/ratingbar" />&ndash;&gt;-->
+
+                <!--                        &lt;!&ndash;                        <ProgressBar&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:id="@+id/progressbar1"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_width="220dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_height="15dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progress="80"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progressDrawable="@drawable/progressbar_style"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintBottom_toBottomOf="@+id/ratingbar"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintHorizontal_bias="0.833"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintStart_toEndOf="@+id/textView7"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/txt_general_reviews" />&ndash;&gt;-->
+
+
+                <!--                        &lt;!&ndash;                        <ProgressBar&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:id="@+id/progressbar2"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_width="220dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_height="15dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progress="65"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progressDrawable="@drawable/progressbar_style"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/progressbar1"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/progressbar1"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/progressbar1" />&ndash;&gt;-->
+
+
+                <!--                        &lt;!&ndash;                        <ProgressBar&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:id="@+id/progressbar3"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_width="220dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_height="15dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progress="20"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progressDrawable="@drawable/progressbar_style"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/progressbar5"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/progressbar5"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/progressbar5" />&ndash;&gt;-->
+
+                <!--                        &lt;!&ndash;                        <ProgressBar&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:id="@+id/progressbar4"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_width="220dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_height="15dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progress="60"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progressDrawable="@drawable/progressbar_style"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/progressbar2"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/progressbar2"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/progressbar2" />&ndash;&gt;-->
+
+                <!--                        &lt;!&ndash;                        <ProgressBar&ndash;&gt;-->
+
+                <!--                        &lt;!&ndash;                            android:id="@+id/progressbar5"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            style="?android:attr/progressBarStyleHorizontal"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_width="220dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_height="15dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:layout_marginTop="10dp"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progress="100"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            android:progressDrawable="@drawable/progressbar_style"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintEnd_toEndOf="@+id/progressbar4"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintStart_toStartOf="@+id/progressbar4"&ndash;&gt;-->
+                <!--                        &lt;!&ndash;                            app:layout_constraintTop_toBottomOf="@+id/progressbar4" />&ndash;&gt;-->
+
+
+                <!--                    </RelativeLayout>-->
+
+
+                <!--                </androidx.cardview.widget.CardView>-->
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="General Review"
+                    android:textColor="#808080"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardview1" />
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    style="?android:ratingBarStyleSmall"
+                    android:layout_width="79dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:rating="5"
+                    android:stepSize="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/progressbar3" />
+
+
+                <TextView
+                    android:layout_marginBottom="50dp"
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/metropolis"
+                    android:text="36,062"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/ratingbar"
+                    app:layout_constraintStart_toStartOf="@+id/ratingbar"
+                    app:layout_constraintTop_toTopOf="@+id/ratingbar" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressbar1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="40dp"
+                    android:progress="80"
+                    android:progressDrawable="@drawable/progressbar_style"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressbar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="10dp"
+                    android:progress="65"
+                    android:progressDrawable="@drawable/progressbar_style"
+                    app:layout_constraintEnd_toEndOf="@+id/progressbar1"
+                    app:layout_constraintStart_toStartOf="@+id/progressbar1"
+                    app:layout_constraintTop_toBottomOf="@+id/progressbar1" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar3"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="10dp"
+                    android:progress="20"
+                    android:progressDrawable="@drawable/progressbar_style"
+                    app:layout_constraintEnd_toEndOf="@+id/progressbar5"
+                    app:layout_constraintStart_toStartOf="@+id/progressbar5"
+                    app:layout_constraintTop_toBottomOf="@+id/progressbar5" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar4"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="10dp"
+                    android:progress="60"
+                    android:progressDrawable="@drawable/progressbar_style"
+                    app:layout_constraintEnd_toEndOf="@+id/progressbar2"
+                    app:layout_constraintStart_toStartOf="@+id/progressbar2"
+                    app:layout_constraintTop_toBottomOf="@+id/progressbar2" />
+
+                <ProgressBar
+                    android:id="@+id/progressbar5"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="10dp"
+                    android:progress="25"
+                    android:progressDrawable="@drawable/progressbar_style"
+                    app:layout_constraintEnd_toEndOf="@+id/progressbar4"
+                    app:layout_constraintStart_toStartOf="@+id/progressbar4"
+                    app:layout_constraintTop_toBottomOf="@+id/progressbar4" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,667 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <VideoView
+                        android:id="@+id/video"
+                        android:layout_width="match_parent"
+                        android:layout_height="230dp">
+
+                        <!--                        <com.google.android.material.progressindicator.LinearProgressIndicator-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content" />-->
+
+                    </VideoView>
+
+                    <TextView
+                        android:id="@+id/txt_general_Service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/video"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/metropolis"
+                        android:text="\tANNUAL \n MAITANENCE \n CONTRACT"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_general_Service"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_star_rate_24" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_general_Service"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/imageView5"
+                        android:fontFamily="@font/metropolis"
+                        android:text="4.56(208K)" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView_event_note1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_baseline_event_note_24" />
+
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_toRightOf="@+id/imageView_event_note1"
+                        android:fontFamily="@font/metropolis"
+                        android:text="546 Bookings in Ramapuram this year" />
+
+
+                    <TextView
+                        android:id="@+id/txt_service_waterwash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/metropolis"
+                        android:text="Schemes"
+                        android:textSize="20sp" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/splitaccardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/txt_service_waterwash"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        app:cardCornerRadius="10dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_baseline_star_rate_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/topic" />
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4.6(28K)"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                                app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                                app:layout_constraintStart_toEndOf="@+id/textView7"
+                                app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+                            <TextView
+                                android:id="@+id/textView9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="60 min."
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+                                app:layout_constraintStart_toEndOf="@+id/textView8"
+                                app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                                app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+
+                            <TextView
+                                android:id="@+id/topic"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="SPLIT AC"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/txt_line_waterwash_ss"-->
+                            <!--                        android:layout_width="344dp"-->
+                            <!--                        android:layout_height="15dp"-->
+                            <!--                        android:fontFamily="@font/metropolis"-->
+                            <!--                        android:text="&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/cardview_splitss1"-->
+                            <!--                        android:layout_marginTop="5dp"-->
+                            <!--                        android:layout_marginLeft="25dp"/>-->
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/windowaccardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/splitaccardview"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp"
+                        android:visibility="visible"
+                        app:cardCornerRadius="10dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView_rating_window"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4.6(28K)"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_star_window"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_star_window"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_star_window" />
+
+                            <ImageView
+                                android:id="@+id/imageView_rupee_windowss"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_star_window" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_windowss_waterwash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_windowss"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_rupee_windowss"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_rupee_windowss" />
+
+                            <TextView
+                                android:id="@+id/txt_price_windowss_waterwash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_windowss"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_windowss_waterwash"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_rupee_windowss" />
+
+                            <TextView
+                                android:id="@+id/txt_duration_windowss_waterwash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="60 min."
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_windowss"
+                                app:layout_constraintStart_toEndOf="@+id/txt_price_windowss_waterwash"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_rupee_windowss" />
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_rupee_windowss" />
+
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                                app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+                            <ImageView
+                                android:id="@+id/imageView_star_window"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_baseline_star_rate_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/topic2" />
+
+                            <TextView
+                                android:id="@+id/topic2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="WINDOW AC"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/txt_line_windowac_waterwash_ss"-->
+                            <!--                        android:layout_width="344dp"-->
+                            <!--                        android:layout_height="15dp"-->
+                            <!--                        android:fontFamily="@font/metropolis"-->
+                            <!--                        android:text="&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"-->
+                            <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                            <!--                        app:layout_constraintTop_toBottomOf="@+id/cardview_windowss1"-->
+                            <!--                        android:layout_marginTop="10dp"-->
+                            <!--                        android:layout_marginLeft="25dp"/>-->
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cassetteaccardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/windowaccardview"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="80dp"
+                        android:elevation="5dp"
+                        android:visibility="visible"
+                        app:cardCornerRadius="10dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/imageView_rupee_cassettess"
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_star_cassettess"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_star_cassettess"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_star_cassettess" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_cassettess_waterwash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_cassettess"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_rupee_cassettess"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_rupee_cassettess" />
+
+                            <TextView
+                                android:id="@+id/txt_price_cassettess_waterwash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_cassettess"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_cassettess_waterwash"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_rupee_cassettess" />
+
+                            <TextView
+                                android:id="@+id/txt_duration_cassettess_waterwash"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="60 min."
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_cassettess"
+                                app:layout_constraintStart_toEndOf="@+id/txt_price_cassettess_waterwash"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_rupee_cassettess" />
+
+                            <ImageView
+                                android:id="@+id/imageView_cassettess_pin"
+                                android:layout_width="29dp"
+                                android:layout_height="28dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_rupee_cassettess"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_rupee_cassettess"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_rupee_cassettess" />
+
+
+                            <TextView
+                                android:id="@+id/textView_cassettess"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="40dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_cassettess_pin"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_cassettess_pin" />
+
+
+                            <TextView
+                                android:id="@+id/textView_rating_cassettess"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4.6(28K)"
+                                app:layout_constraintBottom_toTopOf="@+id/imageView_rupee_cassettess"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_star_cassettess"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_star_cassettess" />
+
+                            <ImageView
+                                android:id="@+id/imageView_star_cassettess"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                android:src="@drawable/ic_baseline_star_rate_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/topic3" />
+
+                            <TextView
+                                android:id="@+id/topic3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="CASSETTE AC"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!--                    <TextView-->
+                            <!--                        android:id="@+id/txt_line_cassettessac_waterwash_ss"-->
+                            <!--                        android:layout_width="344dp"-->
+                            <!--                        android:layout_height="15dp"-->
+                            <!--                        android:fontFamily="@font/metropolis"-->
+                            <!--                        android:text="&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"-->
+                            <!--                        android:layout_marginTop="10dp"-->
+                            <!--                        android:layout_marginLeft="25dp"/>-->
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@+id/footer"
+        android:backgroundTint="#008116">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Congragulations!! You Have Saved ₹ 300 "
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/metropolis"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFEC165F">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:text="Total Items  "
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtitems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txtitems"
+                    android:gravity="center"
+                    android:text=" |"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/txt2"
+                    android:gravity="center"
+                    android:text="  ₹"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/metropolis"/>
+
+                <TextView
+                    android:id="@+id/txttotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/txt3"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cartt"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    android:text="VIEW CART"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/frontloadingpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:indeterminateTint="#FF4D4D"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>

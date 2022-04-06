@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "282395808730",
+    "firebase_url": "https://future-f178e-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "future-f178e",
+    "storage_bucket": "future-f178e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282395808730:android:cbc03edd4c760637aea6e3",
+        "android_client_info": {
+          "package_name": "com.futureinspirator.acbaradise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282395808730-1ba4re1cifnrjvjeulcm1jkgefu7qngo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.futureinspirator.acbaradise",
+            "certificate_hash": "b4e0c1ac35519f434b8dd63a072555c64855919c"
+          }
+        },
+        {
+          "client_id": "282395808730-66k7b6lnebkjursp9e5pl2co7sh2r7rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMETa14Cis8criOrApSF-mCxUz8Qoo_KI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282395808730-66k7b6lnebkjursp9e5pl2co7sh2r7rn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282395808730:android:aef7241c783f991daea6e3",
+        "android_client_info": {
+          "package_name": "com.futureinspirator.acbaradises"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282395808730-66k7b6lnebkjursp9e5pl2co7sh2r7rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMETa14Cis8criOrApSF-mCxUz8Qoo_KI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282395808730-66k7b6lnebkjursp9e5pl2co7sh2r7rn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

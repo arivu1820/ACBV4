@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginBottom="90dp"
+                android:id="@+id/cassette_total_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="15dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_waterleak1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_waterleak1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                                app:layout_constraintStart_toStartOf="@+id/imageView4">
+
+
+                                <Button
+                                    android:id="@+id/waterleakbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_waterleak2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_waterleak1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_waterleak1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_waterleak1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_waterleak1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subwaterleak"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtwaterleak"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addwaterleak"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/waterleakprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_waterleak1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_waterleak1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_waterleak1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_waterleak1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium Membership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+                                app:layout_constraintStart_toEndOf="@+id/imageView1"
+                                app:layout_constraintTop_toTopOf="@+id/imageView1" />
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+                                app:layout_constraintStart_toEndOf="@+id/textView7"
+                                app:layout_constraintTop_toTopOf="@+id/imageView1" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicwaterleak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="WATER LEAK"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout"
+
+                            >
+
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="15dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_gasleak1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_gasleak1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView5"
+                                app:layout_constraintStart_toStartOf="@+id/imageView5">
+
+                                <Button
+                                    android:id="@+id/gasleakbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_gasleak2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_gasleak1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_gasleak1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_gasleak1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_gasleak1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subgasleak"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtgasleak"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addgasleak"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/gasleakprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_gasleak1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_gasleak1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_gasleak1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_gasleak1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView11"
+                                app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/textView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+                            <TextView
+                                android:id="@+id/textView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                                app:layout_constraintStart_toEndOf="@+id/textView6"
+                                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicgasleak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="GAS LEAK"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+                            <ImageView
+                                android:id="@+id/imageView7"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_stabilizer1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_stabilizer1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                                app:layout_constraintStart_toStartOf="@+id/imageView7">
+
+                                <Button
+                                    android:id="@+id/stabilizerbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_stabilizer2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_stabilizer1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_stabilizer1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_stabilizer1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_stabilizer1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/substabilizer"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtstabilizer"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addstabilizer"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/stabilizerprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_stabilizer1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_stabilizer1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_stabilizer1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_stabilizer1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_stablizer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_stablizer_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_stablizer_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_stablizer_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_stablizer" />
+
+                            <ImageView
+                                android:id="@+id/imageView_stablizer"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_stablizer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_stablizer"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_stablizer"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_stablizer" />
+
+                            <TextView
+                                android:id="@+id/txt_price_stablizer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_stablizer"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_stablizer"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_stablizer" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicstabilizer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="STABILIZER"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView6"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_pcboard1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_pcboard1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView6"
+                                app:layout_constraintStart_toStartOf="@+id/imageView6">
+
+                                <Button
+                                    android:id="@+id/pcboardbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_pcboard2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_pcboard1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_pcboard1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_pcboard1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_pcboard1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subpcboard"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtpcboard"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addpcboard"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/pcboardprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_pcboard1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_pcboard1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_pcboard1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_pcboard1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_pcboard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_pcboard_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_pcboard_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_pcboard_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_pcboard" />
+
+
+                            <ImageView
+                                android:id="@+id/imageView_pcboard"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_pcboard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_pcboard"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_pcboard"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_pcboard" />
+
+                            <TextView
+                                android:id="@+id/txt_price_pcboard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_pcboard"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_pcboard"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_pcboard" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicpcboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="PC BOARD"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview3"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView8"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_indoorcoil1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView8"
+                                app:layout_constraintStart_toStartOf="@+id/imageView8">
+
+                                <Button
+                                    android:id="@+id/indoorcoilbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_indoorcoil2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_indoorcoil1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subindoorcoil"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtindoorcoil"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addindoorcoil"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/indoorcoilprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_indoorcoil1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_indoorcoil1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_indoorcoil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_indoorcoil_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoorcoil_bookmark" />
+
+                            <ImageView
+                                android:id="@+id/imageView_indoorcoil_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="18dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_indoorcoil" />
+
+                            <ImageView
+                                android:id="@+id/imageView_indoorcoil"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="60dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_indoorcoil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_indoorcoil"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_indoorcoil"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoorcoil" />
+
+                            <TextView
+                                android:id="@+id/txt_price_indoorcoil"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_indoorcoil"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_indoorcoil"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_indoorcoil" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicindoorcoil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="INDOOR COIL"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview7"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout">
+
+
+                            <ImageView
+                                android:id="@+id/imageView9"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoorcondenser1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                                app:layout_constraintStart_toStartOf="@+id/imageView9">
+
+                                <Button
+                                    android:id="@+id/outdoorcondenserbtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_outdoorcondenser2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoorcondenser1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/suboutdoorcondenser"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtoutdoorcondenser"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addoutdoorcondenser"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/outdoorcondenserprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_outdoorcondenser1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_outdoorcondenser1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_outdoorcomdenser"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoorcomdenser_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorcomdenser_bookmark" />
+
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoorcomdenser_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_outdoorcomdenser" />
+
+                            <ImageView
+                                android:id="@+id/imageView_outdoorcomdenser"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="75dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_outdoorcomdenser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoorcomdenser"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_outdoorcomdenser"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorcomdenser" />
+
+                            <TextView
+                                android:id="@+id/txt_price_outdoorcomdenser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_outdoorcomdenser"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_outdoorcomdenser"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_outdoorcomdenser" />
+
+                            <TextView
+                                android:id="@+id/topicoutdoorcondenser"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="OUTDOOR \nCONDENSER"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardview10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardview8"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/purple_200"
+                        android:elevation="5dp"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/tabLayout"
+
+                            >
+
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="100dp"
+                                android:layout_height="60dp"
+                                android:layout_margin="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginEnd="30dp"
+                                app:layout_constraintBottom_toTopOf="@+id/cardview_remote1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_remote1"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="20dp"
+                                android:elevation="0dp"
+                                android:visibility="visible"
+                                app:cardCornerRadius="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView10"
+                                app:layout_constraintStart_toStartOf="@+id/imageView10">
+
+                                <Button
+                                    android:id="@+id/remotebtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#EC165F"
+                                    android:fontFamily="@font/metropolis"
+                                    android:text="ADD"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    tools:ignore="TouchTargetSizeCheck" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_remote2"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_remote1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_remote1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_remote1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_remote1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <Button
+                                        android:id="@+id/subremote"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="-"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+
+                                    <TextView
+                                        android:id="@+id/txtremote"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/addremote"
+                                        android:layout_width="26.66dp"
+                                        android:layout_height="match_parent"
+                                        android:background="#FFEC165F"
+                                        android:gravity="center"
+                                        android:text="+"
+                                        android:textColor="@color/white"
+                                        android:textSize="30dp" />
+                                </LinearLayout>
+
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/remoteprogressbar"
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:backgroundTint="#EC165F"
+                                android:visibility="invisible"
+                                app:layout_constraintBottom_toBottomOf="@+id/cardview_remote1"
+                                app:layout_constraintEnd_toEndOf="@+id/cardview_remote1"
+                                app:layout_constraintStart_toStartOf="@+id/cardview_remote1"
+                                app:layout_constraintTop_toTopOf="@+id/cardview_remote1">
+
+                                <ProgressBar
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:indeterminateTint="@color/white"
+                                    android:visibility="visible" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txt_remote"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="45dp"
+                                android:layout_marginRight="130dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="Extra 100 OFF if Premimium \nMembership is taken"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_remote_bookmark"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_remote_bookmark" />
+
+
+                            <ImageView
+                                android:id="@+id/imageView_remote_bookmark"
+                                android:layout_width="22dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:src="@drawable/ic_baseline_bookmark_24"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/imageView_remote" />
+
+                            <ImageView
+                                android:layout_marginTop="60dp"
+                                android:id="@+id/imageView_remote"
+                                android:layout_width="19dp"
+                                android:layout_height="19dp"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/indian_currency"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_discount_price_remote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="4̶9̶9̶"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_remote"
+                                app:layout_constraintStart_toEndOf="@+id/imageView_remote"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_remote" />
+
+                            <TextView
+                                android:id="@+id/txt_price_remote"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/metropolis"
+                                android:text="399"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_remote"
+                                app:layout_constraintStart_toEndOf="@+id/txt_discount_price_remote"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_remote" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <TextView
+                            android:id="@+id/topicremote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="13dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="13dp"
+                            android:fontFamily="@font/metropolis"
+                            android:text="REMOTE"
+                            android:textColor="@color/black"
+                            android:textSize="18dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

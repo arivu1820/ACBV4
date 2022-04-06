@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1715" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/add_btn_shape.xml" value="0.1895" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/back_to_home_button.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/blank.xml" value="0.1455" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/bottomsheet.xml" value="0.158" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/btn_border.xml" value="0.1895" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/custom_input_shape.xml" value="0.1895" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/gradient.xml" value="0.1895" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_baseline_arrow_right_24.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_baseline_bookmark_24.xml" value="0.1455" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_baseline_event_note_24.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_baseline_shopping_bag_24.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1715" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_wave__1_.xml" value="0.145" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/ic_wave__2_.xml" value="0.145" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/inuput_shape_login.xml" value="0.1455" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/navigationbaritem.xml" value="0.136" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/navigationbartext.xml" value="0.136" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/orderdiscountbackground.xml" value="0.1525" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/placeorder.xml" value="0.158" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/profile_back_button.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/profile_bk.xml" value="0.148" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/progressbar_style.xml" value="0.1455" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/request_btn_background.xml" value="0.136" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/search.xml" value="0.1455" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/search_border.xml" value="0.1455" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/sliderimagetemp.xml" value="0.1455" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/tipbackground.xml" value="0.172" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/drawable/txt_border.xml" value="0.1895" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/font/font.xml" value="0.28020833333333334" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/font/iceberg.xml" value="0.28020833333333334" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/font/metropolis.xml" value="0.27589743589743587" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/Copy of activity_acb_blogs.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/Copy of activity_faultscassetteacservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/Copy of activity_faultspage.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/Copy of fragment_home.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/Copy of fragment_splitac_scheme2_withoutspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/Copy of fragment_splitac_scheme3_withspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/Copy of fragment_windowac_scheme2_withspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_acb_blogs.xml" value="0.24539877300613497" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_amc_subscriber_page.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_amccassetteacschemes.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_amcpage.xml" value="0.2" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_amcservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_amcsplitacschemes.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_amcwindowacschemes.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_booking.xml" value="0.2" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_cart_summary.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_checkout.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_current_location.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_faultscassetteacservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_faultspage.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_faultssplitacservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_faultswindowacservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_generalservicepage.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_generalservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_homepage.xml" value="0.2" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_homesearchview.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_installuninstallcombo2.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_installuninstallcombopage.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_installuninstallservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_map.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_mapping.xml" value="0.2359375" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_orderhistory.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_orderhistorylist.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_ordersummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_premium.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_searchtemp.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_searchview.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_sendotp.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_sparescassetteacservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_sparespage.xml" value="0.2" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_sparessplitacservicesummay.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_spareswindowacservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_summary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_userverification.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_waterwashpage.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_waterwashservicesummary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/activity_waterwaterpage.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/ad.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/add.xml" value="0.536" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/amc_list.xml" value="0.2899022801302932" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/amc_subscribe.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/bookinglist.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/bottom_nav_menu.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/button_border.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/child_item.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/content_main.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/content_map.xml" value="0.1109375" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/example_item.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_about_a_c_b.xml" value="0.25684210526315787" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_amc_subscription.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_cart_summary.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_cassette_faults.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_cassette_spares.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_cassetteac_installuninstall_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_cassetteac_scheme1_withoutspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_cassetteac_scheme1_withspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_first.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_mapping.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_myorders.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_second.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_split_faults.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_split_spares.xml" value="0.22626931567328917" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac_installuninstall_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac_scheme1_withoutspare_bsd.xml" value="0.2359375" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac_scheme1_withspare_bsd.xml" value="0.2" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac_scheme2_withoutspare_bsd.xml" value="0.2359375" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac_scheme2_withspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac_scheme3_withoutspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_splitac_scheme3_withspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_window_faults.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_window_spares.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_windowac_installuninstall_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_windowac_scheme1_withoutspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_windowac_scheme1_withspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_windowac_scheme2_withoutspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/fragment_windowac_scheme2_withspare_bsd.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/home.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/orderhistorylist.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/orderhistoryproductlist.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/parent_item.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/problem.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/problemlayout.xml" value="0.264" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/sample.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/slide_layout.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/layout/tablayout.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/menu/example_menu.xml" value="0.25" />
+        <entry key="..\:/App projects/acbaradise/app/src/main/res/menu/search_menu.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
