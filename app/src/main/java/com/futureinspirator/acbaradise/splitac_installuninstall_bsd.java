@@ -1,5 +1,6 @@
 package com.futureinspirator.acbaradise;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -74,7 +75,8 @@ public class splitac_installuninstall_bsd extends BottomSheetDialogFragment {
 
     private DatabaseReference cart = FirebaseDatabase.getInstance().getReference();
     private TextView txt_originalprice_install_splitac,txt_originalprice_splitac_uninstall,txt_originalprice_combo_cassetteac;
-
+    private int disstring_install_price,disstring_uninstall_price,disstring_combo_price;
+    private TextView txt_discount_price_install_splitac_install ,txt_discount_price_splitac_install ,txt_discount_price_install_cassetteac;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -86,8 +88,12 @@ public class splitac_installuninstall_bsd extends BottomSheetDialogFragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String string_install_price = snapshot.child("Products").child("Installuninstall").child(Category).child("Price").child("Install").getValue().toString();
                 txt_originalprice_install_splitac.setText(""+string_install_price);
-
                 installprice = Integer.parseInt(string_install_price);
+                disstring_install_price= installprice + 100;
+                txt_discount_price_install_splitac_install.setText(""+disstring_install_price);
+                txt_discount_price_install_splitac_install.setPaintFlags(txt_discount_price_install_splitac_install.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
             }
 
             @Override
@@ -120,8 +126,13 @@ public class splitac_installuninstall_bsd extends BottomSheetDialogFragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String string_uninstall_price = snapshot.child("Products").child("Installuninstall").child(Category).child("Price").child("Uninstall").getValue().toString();
                 txt_originalprice_splitac_uninstall.setText(""+string_uninstall_price);
-
                 uninstallprice = Integer.parseInt(string_uninstall_price);
+                disstring_uninstall_price= uninstallprice + 100;
+                txt_discount_price_splitac_install.setText(""+disstring_uninstall_price);
+                txt_discount_price_splitac_install.setPaintFlags(txt_discount_price_splitac_install.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
+
             }
 
             @Override
@@ -154,6 +165,11 @@ public class splitac_installuninstall_bsd extends BottomSheetDialogFragment {
                 String string_combo_price = snapshot.child("Products").child("Installuninstall").child(Category).child("Price").child("Combo").getValue().toString();
                 txt_originalprice_combo_cassetteac.setText(""+string_combo_price);
                 comboprice = Integer.parseInt(string_combo_price);
+
+
+                disstring_combo_price= comboprice + 100;
+                txt_discount_price_install_cassetteac.setText(""+disstring_combo_price);
+                txt_discount_price_install_cassetteac.setPaintFlags(txt_discount_price_install_cassetteac.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
 
             @Override
@@ -199,7 +215,9 @@ public class splitac_installuninstall_bsd extends BottomSheetDialogFragment {
             }
         });
 
-
+        txt_discount_price_install_splitac_install=v.findViewById(R.id.txt_discount_price_install_splitac_install);
+        txt_discount_price_splitac_install=v.findViewById(R.id.txt_discount_price_splitac_install);
+        txt_discount_price_install_cassetteac=v.findViewById(R.id.txt_discount_price_install_cassetteac);
 
         txt_originalprice_install_splitac =v.findViewById(R.id.txt_originalprice_install_splitac);
         txt_originalprice_splitac_uninstall=v.findViewById(R.id.txt_originalprice_splitac_uninstall);

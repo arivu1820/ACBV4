@@ -46,6 +46,8 @@ public class ParentItemAdapter extends RecyclerView.Adapter<ParentItemAdapter.Pa
             int position)
     {
 
+        position = (itemList.size()-1)-position;
+
 
         ParentItem parentItem = itemList.get(position);
 

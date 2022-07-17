@@ -81,14 +81,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <VideoView
+                                <ImageView
                                     android:id="@+id/video1"
                                     android:layout_width="match_parent"
                                     android:layout_height="150dp"
                                     android:layout_marginLeft="30dp"
                                     android:layout_marginTop="20dp"
                                     android:layout_marginRight="30dp"
-                                    android:layout_marginBottom="20dp" />
+                                    android:layout_marginBottom="20dp"
+                                    android:src="@drawable/acb"/>
 
                                 <TextView
                                     android:layout_width="match_parent"
@@ -117,14 +118,15 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent">
 
-                                <VideoView
+                                <ImageView
                                     android:id="@+id/video2"
                                     android:layout_width="match_parent"
                                     android:layout_height="150dp"
                                     android:layout_marginLeft="30dp"
                                     android:layout_marginTop="20dp"
                                     android:layout_marginRight="30dp"
-                                    android:layout_marginBottom="20dp" />
+                                    android:layout_marginBottom="20dp"
+                                    android:src="@drawable/acb"/>
 
                                 <TextView
                                     android:layout_width="match_parent"

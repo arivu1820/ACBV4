@@ -1,5 +1,6 @@
 package com.futureinspirator.acbaradise;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -70,7 +71,8 @@ public class windowac_installuninstall_bsd extends BottomSheetDialogFragment {
     private int discomboprice=0;
     private DatabaseReference discount = FirebaseDatabase.getInstance().getReference().child("Products").child("Installuninstall").child(Category).child("Discount");
      private TextView txt_originalprice_install_windowac, txt_originalprice_uninstall_windowac,txt_originalprice_windowac_combo;
-
+private TextView txt_discount_price_install_windowac,txt_discount_price_uninstall_windowac,txt_discount_price_install_windowac_combo;
+private int disstring_install_price,disstring_uninstall_price,disstring_combo_price;
 
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference();
 
@@ -88,6 +90,12 @@ public class windowac_installuninstall_bsd extends BottomSheetDialogFragment {
                 String string_install_price = snapshot.child("Products").child("Installuninstall").child(Category).child("Price").child("Install").getValue().toString();
                 installprice = Integer.parseInt(string_install_price);
                 txt_originalprice_install_windowac.setText(""+string_install_price);
+
+                disstring_install_price=installprice + 100;
+                txt_discount_price_install_windowac.setText(""+disstring_install_price);
+                txt_discount_price_install_windowac.setPaintFlags(txt_discount_price_install_windowac.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
 
             }
 
@@ -123,6 +131,9 @@ public class windowac_installuninstall_bsd extends BottomSheetDialogFragment {
                 uninstallprice = Integer.parseInt(string_uninstall_price);
                 txt_originalprice_uninstall_windowac.setText(""+string_uninstall_price);
 
+                disstring_uninstall_price=uninstallprice + 100;
+                txt_discount_price_uninstall_windowac.setText(""+disstring_uninstall_price);
+                txt_discount_price_uninstall_windowac.setPaintFlags(txt_discount_price_uninstall_windowac.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
 
             @Override
@@ -155,6 +166,11 @@ public class windowac_installuninstall_bsd extends BottomSheetDialogFragment {
                 String string_combo_price = snapshot.child("Products").child("Installuninstall").child(Category).child("Price").child("Combo").getValue().toString();
                 comboprice = Integer.parseInt(string_combo_price);
                 txt_originalprice_windowac_combo.setText(""+string_combo_price);
+
+
+                disstring_combo_price=comboprice + 100;
+                txt_discount_price_install_windowac_combo.setText(""+disstring_combo_price);
+                txt_discount_price_install_windowac_combo.setPaintFlags(txt_discount_price_install_windowac_combo.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
 
             @Override
@@ -201,7 +217,9 @@ public class windowac_installuninstall_bsd extends BottomSheetDialogFragment {
 
 
 
-
+        txt_discount_price_install_windowac=v.findViewById(R.id.txt_discount_price_install_windowac);
+                txt_discount_price_uninstall_windowac=v.findViewById(R.id.txt_discount_price_uninstall_windowac);
+        txt_discount_price_install_windowac_combo=v.findViewById(R.id.txt_discount_price_install_windowac_combo);
 
         txt_originalprice_install_windowac=v.findViewById(R.id.txt_originalprice_install_windowac);
         txt_originalprice_uninstall_windowac=v.findViewById(R.id.txt_originalprice_uninstall_windowac);

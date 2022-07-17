@@ -1,5 +1,6 @@
 package com.futureinspirator.acbaradise;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -47,6 +48,9 @@ public class fragment_cassette_spares extends Fragment {
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference();
     private DatabaseReference cart = FirebaseDatabase.getInstance().getReference();
     private TextView txt_originalprice_capacitor,txt_originalprice_blower,txt_originalprice_outdoorfan,txt_originalprice_indoormotor,txt_originalprice_outdoormotor,txt_originalprice_indoorcoil,txt_originalprice_outdoorcondenser ,txt_originalprice_swingflap ,txt_originalprice_remote,txt_originalprice_swingmotor;
+    private TextView txt_discount_price_capacitor,txt_discount_price_blower,txt_discount_price_outdoorfan,txt_discount_price_indoormotor,txt_discount_price_outdoormotor,txt_discount_price_swingmotor,txt_discount_price_indoorcoil,txt_discount_price_outdoorcondenser,txt_discount_price_swingflap,txt_discount_price_remote;
+
+    private int disstringcapacitorprice,disstringblowerprice,disstringindoormotorprice,disstringoutdoorfanprice,disstringoutdoormotorprice,disstringswingmotorprice,disstringindoorcoilprice,disstringoutdoorcondenserprice,disstringswingflapprice,distringremoteprice;
 
 
     @Override
@@ -96,6 +100,55 @@ public class fragment_cassette_spares extends Fragment {
                 outdoorcondenserprice = Integer.parseInt(stringoutdoorcondenserprice);
                 swingflapprice = Integer.parseInt(stringswingflapprice);
                 remoteprice = Integer.parseInt(stringremoteprice);
+
+
+
+                disstringcapacitorprice = capacitorprice  + 100;
+                disstringblowerprice =  blowerprice + 100;
+                disstringindoormotorprice = indoormotorprice + 100;
+                disstringoutdoorfanprice  =  outdoorfanprice + 100;
+                disstringoutdoormotorprice=  outdoormotorprice + 100;
+                disstringswingmotorprice   =  swingmotorprice + 100;
+                disstringindoorcoilprice  = indoorcoilprice + 100;
+                disstringoutdoorcondenserprice = outdoorcondenserprice + 100;
+                disstringswingflapprice  = swingflapprice + 100;
+                distringremoteprice     =      remoteprice + 100;
+
+
+                txt_discount_price_capacitor.setText(""+disstringcapacitorprice);
+                txt_discount_price_capacitor.setPaintFlags(txt_discount_price_capacitor.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
+                txt_discount_price_blower.setText(""+disstringblowerprice);
+                txt_discount_price_blower.setPaintFlags(txt_discount_price_blower.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_outdoorfan.setText(""+disstringindoormotorprice);
+                txt_discount_price_outdoorfan.setPaintFlags(txt_discount_price_outdoorfan.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_indoormotor.setText(""+disstringoutdoorfanprice);
+                txt_discount_price_indoormotor.setPaintFlags(txt_discount_price_indoormotor.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_outdoormotor.setText(""+disstringoutdoormotorprice);
+                txt_discount_price_outdoormotor.setPaintFlags(txt_discount_price_outdoormotor.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_swingmotor.setText(""+disstringswingmotorprice);
+                txt_discount_price_swingmotor.setPaintFlags(txt_discount_price_swingmotor.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_indoorcoil.setText(""+disstringindoorcoilprice);
+                txt_discount_price_indoorcoil.setPaintFlags(txt_discount_price_indoorcoil.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_outdoorcondenser.setText(""+disstringoutdoorcondenserprice);
+                txt_discount_price_outdoorcondenser.setPaintFlags(txt_discount_price_outdoorcondenser.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_swingflap.setText(""+disstringswingflapprice);
+                txt_discount_price_swingflap.setPaintFlags(txt_discount_price_swingflap.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_remote.setText(""+distringremoteprice);
+                txt_discount_price_remote.setPaintFlags(txt_discount_price_remote.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
+
+
 
 
             }
@@ -324,6 +377,16 @@ public class fragment_cassette_spares extends Fragment {
             }
         });
 
+        txt_discount_price_capacitor=v.findViewById(R.id.txt_discount_price_capacitor);
+        txt_discount_price_blower=v.findViewById(R.id.txt_discount_price_blower);
+        txt_discount_price_outdoorfan=v.findViewById(R.id.txt_discount_price_outdoorfan);
+        txt_discount_price_indoormotor=v.findViewById(R.id.txt_discount_price_indoormotor);
+        txt_discount_price_outdoormotor=v.findViewById(R.id.txt_discount_price_outdoormotor);
+        txt_discount_price_swingmotor=v.findViewById(R.id.txt_discount_price_swingmotor);
+        txt_discount_price_indoorcoil=v.findViewById(R.id.txt_discount_price_indoorcoil);
+        txt_discount_price_outdoorcondenser=v.findViewById(R.id.txt_discount_price_outdoorcondenser);
+        txt_discount_price_swingflap=v.findViewById(R.id.txt_discount_price_swingflap);
+        txt_discount_price_remote=v.findViewById(R.id.txt_discount_price_remote);
 
 
         txt_originalprice_capacitor =v.findViewById(R.id.txt_originalprice_capacitor);

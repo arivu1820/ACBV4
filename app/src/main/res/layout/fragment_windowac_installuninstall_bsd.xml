@@ -24,7 +24,7 @@
 
                     android:id="@+id/window_install_dialog_cardview"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginRight="10dp"
@@ -41,14 +41,15 @@
                             android:id="@+id/window_install_addbtn_cardview1"
                             android:layout_width="80dp"
                             android:layout_height="42dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="30dp"
                             android:elevation="0dp"
                             android:visibility="visible"
                             app:cardCornerRadius="25dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.85"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_install_windowac"
                             app:layout_constraintVertical_bias="0.75">
 
                             <Button
@@ -56,12 +57,12 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="42dp"
                                 android:background="#FFEC165F"
+                                android:fontFamily="@font/metropolis"
                                 android:text="ADD"
                                 android:textColor="@color/white"
                                 android:textSize="18dp"
                                 android:textStyle="bold"
-                                tools:ignore="TouchTargetSizeCheck"
-                                android:fontFamily="@font/metropolis" />
+                                tools:ignore="TouchTargetSizeCheck" />
 
                         </androidx.cardview.widget.CardView>
                         <androidx.cardview.widget.CardView

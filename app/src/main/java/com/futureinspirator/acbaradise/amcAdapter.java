@@ -46,6 +46,9 @@ public class amcAdapter extends RecyclerView.Adapter<amcAdapter.adapter>{
 
     @Override
     public void onBindViewHolder(@NonNull adapter holder, int position) {
+
+        position = (parentamcs.size()-1)-position;
+
         holder.key.setText(parentamcs.get(position).getKey());
         holder.title.setText(parentamcs.get(position).getTitle());
         holder.firstservice.setText(parentamcs.get(position).getFirstservice());

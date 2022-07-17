@@ -460,7 +460,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(hashvalue);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(hashvalue);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(hashvalue);
 
                 }
             }
@@ -486,7 +486,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(hashvalue);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(hashvalue);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(hashvalue);
 
                 }
             }
@@ -534,7 +534,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("Spares").child("WindowAC").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                 }
             }
 
@@ -557,7 +557,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("Spares").child("CassetteAC").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                 }
             }
 
@@ -582,7 +582,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
 
                 }
             }
@@ -606,7 +606,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("Faults").child("WindowAC").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
 
                 }
             }
@@ -630,7 +630,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("Faults").child("CassetteAC").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
 
                 }
             }
@@ -656,7 +656,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("Installuninstall").child("SplitAC").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
 
                 }
             }
@@ -682,7 +682,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
 
                 }
             }
@@ -706,7 +706,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("Installuninstall").child("CassetteAC").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
 
                 }
             }
@@ -733,16 +733,17 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     if(stringkey.equals("Totalspare")||stringkey.equals("Limitedspare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > SplitAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("SplitAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("SplitAC "+stringkey+"-S1",key);
+                            firstamc("SplitAC "+stringkey+"-S1",key);
+                            secondamc("SplitAC "+stringkey+"-S1",key);
+                            thirdamc("SplitAC "+stringkey+"-S1",key);
+                            fourthamc("SplitAC "+stringkey+"-S1",key);
                         }
                     }
                 }
@@ -768,16 +769,17 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("AMC").child("SplitAC").child("Scheme2").child("Withspare").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     if(stringkey.equals("Totalspare")||stringkey.equals("Limitedspare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > SplitAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("SplitAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("SplitAC "+stringkey+"-S2",key);
+                            firstamc("SplitAC "+stringkey+"-S2",key);
+                            secondamc("SplitAC "+stringkey+"-S2",key);
+                            thirdamc("SplitAC "+stringkey+"-S2",key);
+                            fourthamc("SplitAC "+stringkey+"-S2",key);
                         }
                     }
 
@@ -805,16 +807,17 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     if(stringkey.equals("Totalspare")||stringkey.equals("Limitedspare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > SplitAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("SplitAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("SplitAC "+stringkey+"-S3",key);
+                            firstamc("SplitAC "+stringkey+"-S3",key);
+                            secondamc("SplitAC "+stringkey+"-S3",key);
+                            thirdamc("SplitAC "+stringkey+"-S3",key);
+                            fourthamc("SplitAC "+stringkey+"-S3",key);
                         }
                     }
                 }
@@ -841,17 +844,18 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     String stringkey = dataSnapshot.getKey().toString();
                     if(stringkey.equals("Nospare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > SplitAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("SplitAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("SplitAC "+stringkey+"-S1",key);
+                            firstamc("SplitAC "+stringkey+"-S1",key);
+                            secondamc("SplitAC "+stringkey+"-S1",key);
+                            thirdamc("SplitAC "+stringkey+"-S1",key);
+                            fourthamc("SplitAC "+stringkey+"-S1",key);
                         }
                     }
                 }
@@ -877,17 +881,18 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     String stringkey = dataSnapshot.getKey().toString();
                     if(stringkey.equals("Nospare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > SplitAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("SplitAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("SplitAC "+stringkey+"-S2",key);
+                            firstamc("SplitAC "+stringkey+"-S2",key);
+                            secondamc("SplitAC "+stringkey+"-S2",key);
+                            thirdamc("SplitAC "+stringkey+"-S2",key);
+                            fourthamc("SplitAC "+stringkey+"-S2",key);
                         }
                     }
                 }
@@ -913,17 +918,18 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     String stringkey = dataSnapshot.getKey().toString();
                     if(stringkey.equals("Nospare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > SplitAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("SplitAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("SplitAC "+stringkey+"-S3",key);
+                            firstamc("SplitAC "+stringkey+"-S3",key);
+                            secondamc("SplitAC "+stringkey+"-S3",key);
+                            thirdamc("SplitAC "+stringkey+"-S3",key);
+                            fourthamc("SplitAC "+stringkey+"-S3",key);
                         }
                     }
                 }
@@ -951,16 +957,17 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     if(stringkey.equals("Totalspare")||stringkey.equals("Limitedspare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > WindowAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("WindowAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("WindowAC "+stringkey+"-S1",key);
+                            firstamc("WindowAC "+stringkey+"-S1",key);
+                            secondamc("WindowAC "+stringkey+"-S1",key);
+                            thirdamc("WindowAC "+stringkey+"-S1",key);
+                            fourthamc("WidnowAC "+stringkey+"-S1",key);
                         }
                     }
                 }
@@ -986,16 +993,17 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("AMC").child("WindowAC").child("Scheme2").child("Withspare").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     if(stringkey.equals("Totalspare")||stringkey.equals("Limitedspare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > WindowAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("WindowAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("WindowAC "+stringkey+"-S2",key);
+                            firstamc("WindowAC "+stringkey+"-S2",key);
+                            secondamc("WindowAC "+stringkey+"-S2",key);
+                            thirdamc("WindowAC "+stringkey+"-S2",key);
+                            fourthamc("WidnowAC "+stringkey+"-S2",key);
                         }
                     }
                 }
@@ -1022,17 +1030,18 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     String stringkey = dataSnapshot.getKey().toString();
                     if(stringkey.equals("Nospare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > WindowAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("WindowAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("WindowAC "+stringkey+"-S1",key);
+                            firstamc("WindowAC "+stringkey+"-S1",key);
+                            secondamc("WindowAC "+stringkey+"-S1",key);
+                            thirdamc("WindowAC "+stringkey+"-S1",key);
+                            fourthamc("WidnowAC "+stringkey+"-S1",key);
                         }
                     }
                 }
@@ -1057,17 +1066,18 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("AMC").child("WindowAC").child("Scheme2").child("Withoutspare").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     String stringkey = dataSnapshot.getKey().toString();
                     if(stringkey.equals("Nospare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > WindowAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("WindowAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("WindowAC "+stringkey+"-S2",key);
+                            firstamc("WindowAC "+stringkey+"-S2",key);
+                            secondamc("WindowAC "+stringkey+"-S2",key);
+                            thirdamc("WindowAC "+stringkey+"-S2",key);
+                            fourthamc("WidnowAC "+stringkey+"-S2",key);
                         }
                     }
                 }
@@ -1095,16 +1105,17 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     if(stringkey.equals("Totalspare")||stringkey.equals("Limitedspare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > CassetteAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
-                            amcsubscriber("CassetteAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("CassetteAC "+stringkey+"-S1",key);
+                            firstamc("CassetteAC "+stringkey+"-S1",key);
+                            secondamc("CassetteAC "+stringkey+"-S1",key);
+                            thirdamc("CassetteAC "+stringkey+"-S1",key);
+                            fourthamc("CassetteAC "+stringkey+"-S1",key);
                         }
                     }
                 }
@@ -1130,17 +1141,19 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
                         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Addcart").child("AMC").child("CassetteAC").child("Scheme1").child("Withoutspare").child(dataSnapshot.getKey().toString()).setValue("0");
                     }
                     onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("Booking").child(Orderkey).updateChildren(products);
-                    onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(products);
+//                    onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(products);
                     String stringkey = dataSnapshot.getKey().toString();
                     if(stringkey.equals("Nospare"))
                     {
                         for(int i=0;i<quantity;i++)
                         {
                             String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
-                            HashMap<String,Object> asd = new HashMap<>();
-                            asd.put("AMC > CassetteAC > Scheme1 > Withspare > "+dataSnapshot.getKey().toString(),quantity);
                             amcsubscriber("CassetteAC "+stringkey,key);
-                            onpaid.child("Admin").child("AmcSubscriber").child(key).updateChildren(asd);
+                            amcsubscriber("CassetteAC "+stringkey+"-S1",key);
+                            firstamc("CassetteAC "+stringkey+"-S1",key);
+                            secondamc("CassetteAC "+stringkey+"-S1",key);
+                            thirdamc("CassetteAC "+stringkey+"-S1",key);
+                            fourthamc("CassetteAC "+stringkey+"-S1",key);
                         }
                     }
                 }
@@ -1172,6 +1185,8 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
         HashMap<String,Object> admin = new HashMap<>();
         admin.put("Latitude",String.valueOf(orderLat));
         admin.put("Longitude",String.valueOf(orderLng));
+        admin.put("Number",Number);
+        admin.put("User",mAuth.getCurrentUser().getUid());
         if(payment==1)
         {
             admin.put("Payment","Cash On Delivery");
@@ -1180,7 +1195,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
         {
             admin.put("Payment","Paid");
         }
-        onpaid.child("Admin").child("Userbooking").child(mAuth.getCurrentUser().getUid()).child(Orderkey).updateChildren(admin);
+        onpaid.child("Admin").child("Userbooking").child(Orderkey).updateChildren(admin);
 
         HashMap<String, Object> order = new HashMap<>();
         order.put("Payment",stringpayment);
@@ -1198,22 +1213,22 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
 
     private String amcsubscriber(String title,String key) {
 
+
+        Calendar check = Calendar.getInstance();
+
         String first,second,third,fourth;
         SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy");
         SimpleDateFormat checkingformat = new SimpleDateFormat("a");
         SimpleDateFormat day = new SimpleDateFormat("EEEE");
         SimpleDateFormat hour = new SimpleDateFormat("h");
 
-
-        Calendar check = Calendar.getInstance();
         String checking = checkingformat.format(check.getTime()).toLowerCase();
         String daychecking = day.format(check.getTime()).toLowerCase();
         String hourcheckig = hour.format(check.getTime());
         int inthourchecking = Integer.parseInt(hourcheckig);
 
 
-        if(!(daychecking.equals("sunday"))  &&  checking.equals("am"))
-        {
+        if(!(daychecking.equals("sunday"))  &&  checking.equals("am")) {
             Calendar firstDate = Calendar.getInstance();
             first = format.format(firstDate.getTime()).toUpperCase();
 
@@ -1229,8 +1244,7 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
             fourthDate.add(Calendar.MONTH, 12);
             fourth = format.format(fourthDate.getTime()).toUpperCase();
         }
-        else if(!(daychecking.equals("sunday"))   &&  checking.equals("pm")    &&    (inthourchecking<5||inthourchecking==12))
-        {
+        else if(!(daychecking.equals("sunday"))   &&  checking.equals("pm")    &&    (inthourchecking<5||inthourchecking==12)) {
             Calendar firstDate = Calendar.getInstance();
             first = format.format(firstDate.getTime()).toUpperCase();
 
@@ -1278,8 +1292,298 @@ public class checkout extends AppCompatActivity implements LocationListener, OnM
         list.put("Key",key);
         onpaid.child("Users").child(mAuth.getCurrentUser().getUid()).child("amc_subscriber").child(key).updateChildren(list);
 
+
+
         return key;
 
     }
+
+    private void firstamc(String title,String defaultkey) {
+        String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
+        String first,forr,forr1,day="";
+        Calendar check = Calendar.getInstance();
+        SimpleDateFormat adminformatchecking = new SimpleDateFormat("MMM");
+        SimpleDateFormat adminformat = new SimpleDateFormat("yyydd");
+        SimpleDateFormat adminformat1 = new SimpleDateFormat(" dd yyy ");
+        forr = adminformat.format(check.getTime()).toLowerCase();
+        forr1 = adminformat1.format(check.getTime()).toLowerCase();
+        first = adminformatchecking.format(check.getTime()).toUpperCase();
+
+        if(first.equals("JAN")) {
+            day="a";
+        }
+        else if(first.equals("FEB")) {
+            day="b";
+        }
+        else if(first.equals("MAR")) {
+            day="c";
+        }
+        else if(first.equals("APR")) {
+            day="d";
+        }
+        else if(first.equals("MAY")) {
+            day="e";
+        }
+        else if(first.equals("JUN")) {
+            day="f";
+        }
+        else if(first.equals("JUL")) {
+            day="g";
+        }
+        else if(first.equals("AUG")) {
+            day = "h";
+        }
+        else if(first.equals("SEP")) {
+            first="i";
+        }
+        else if(first.equals("OCT")) {
+            day="j";
+        }
+        else if(first.equals("NOV")) {
+            day="k";
+        }
+        else if(first.equals("DEC")) {
+            day="l";
+        }
+
+        HashMap<String,Object> addmonth = new HashMap<>();
+        addmonth.put("Service",title);
+        addmonth.put("Latitude",String.valueOf(orderLat));
+        addmonth.put("Longitude",String.valueOf(orderLng));
+        addmonth.put("Number",Number);
+        addmonth.put("Key",defaultkey);
+        addmonth.put("Serviceday","FirstService");
+        addmonth.put("Date",first + forr1);
+        addmonth.put("User",mAuth.getCurrentUser().getUid());
+        addmonth.put("Orderkey",Orderkey);
+
+
+        if(payment==1)
+        {
+            addmonth.put("Payment","Cash On Delivery");
+        }
+        else if(payment==0)
+        {
+            addmonth.put("Payment","Paid");
+        }
+        onpaid.child("Admin").child("AmcSubscriber").child(forr+day+key).updateChildren(addmonth);
+
+    }
+    private void secondamc(String title,String defaultkey) {
+        String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
+        String first,forr,forr1,day="";
+        Calendar check = Calendar.getInstance();
+        check.add(Calendar.MONTH, 4);
+        SimpleDateFormat adminformatchecking = new SimpleDateFormat("MMM");
+        SimpleDateFormat adminformat = new SimpleDateFormat("yyydd");
+        SimpleDateFormat adminformat1 = new SimpleDateFormat(" dd yyy ");
+        forr = adminformat.format(check.getTime()).toLowerCase();
+        forr1 = adminformat1.format(check.getTime()).toLowerCase();
+        first = adminformatchecking.format(check.getTime()).toUpperCase();
+
+        if(first.equals("JAN")) {
+            day="a";
+        }
+        else if(first.equals("FEB")) {
+            day="b";
+        }
+        else if(first.equals("MAR")) {
+            day="c";
+        }
+        else if(first.equals("APR")) {
+            day="d";
+        }
+        else if(first.equals("MAY")) {
+            day="e";
+        }
+        else if(first.equals("JUN")) {
+            day="f";
+        }
+        else if(first.equals("JUL")) {
+            day="g";
+        }
+        else if(first.equals("AUG")) {
+            day = "h";
+        }
+        else if(first.equals("SEP")) {
+            first="i";
+        }
+        else if(first.equals("OCT")) {
+            day="j";
+        }
+        else if(first.equals("NOV")) {
+            day="k";
+        }
+        else if(first.equals("DEC")) {
+            day="l";
+        }
+
+        HashMap<String,Object> addmonth = new HashMap<>();
+        addmonth.put("Service",title);
+        addmonth.put("Latitude",String.valueOf(orderLat));
+        addmonth.put("Longitude",String.valueOf(orderLng));
+        addmonth.put("Number",Number);
+        addmonth.put("Key",defaultkey);
+        addmonth.put("Serviceday","SecondService");
+        addmonth.put("Date",first + forr1);
+        addmonth.put("User",mAuth.getCurrentUser().getUid());
+        addmonth.put("Orderkey",Orderkey);
+
+
+        if(payment==1)
+        {
+            addmonth.put("Payment","Cash On Delivery");
+        }
+        else if(payment==0)
+        {
+            addmonth.put("Payment","Paid");
+        }
+        onpaid.child("Admin").child("AmcSubscriber").child(forr+day+key).updateChildren(addmonth);
+
+    }
+    private void thirdamc(String title,String defaultkey) {
+        String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
+        String first,forr,forr1,day="";
+        Calendar check = Calendar.getInstance();
+        check.add(Calendar.MONTH, 8);
+        SimpleDateFormat adminformatchecking = new SimpleDateFormat("MMM");
+        SimpleDateFormat adminformat = new SimpleDateFormat("yyydd");
+        SimpleDateFormat adminformat1 = new SimpleDateFormat(" dd yyy ");
+        forr = adminformat.format(check.getTime()).toLowerCase();
+        forr1 = adminformat1.format(check.getTime()).toLowerCase();
+        first = adminformatchecking.format(check.getTime()).toUpperCase();
+
+        if(first.equals("JAN")) {
+            day="a";
+        }
+        else if(first.equals("FEB")) {
+            day="b";
+        }
+        else if(first.equals("MAR")) {
+            day="c";
+        }
+        else if(first.equals("APR")) {
+            day="d";
+        }
+        else if(first.equals("MAY")) {
+            day="e";
+        }
+        else if(first.equals("JUN")) {
+            day="f";
+        }
+        else if(first.equals("JUL")) {
+            day="g";
+        }
+        else if(first.equals("AUG")) {
+            day = "h";
+        }
+        else if(first.equals("SEP")) {
+            first="i";
+        }
+        else if(first.equals("OCT")) {
+            day="j";
+        }
+        else if(first.equals("NOV")) {
+            day="k";
+        }
+        else if(first.equals("DEC")) {
+            day="l";
+        }
+
+        HashMap<String,Object> addmonth = new HashMap<>();
+        addmonth.put("Service",title);
+        addmonth.put("Latitude",String.valueOf(orderLat));
+        addmonth.put("Longitude",String.valueOf(orderLng));
+        addmonth.put("Number",Number);
+        addmonth.put("Key",defaultkey);
+        addmonth.put("Serviceday","ThirdService");
+        addmonth.put("Date",first + forr1);
+        addmonth.put("User",mAuth.getCurrentUser().getUid());
+        addmonth.put("Orderkey",Orderkey);
+
+
+        if(payment==1)
+        {
+            addmonth.put("Payment","Cash On Delivery");
+        }
+        else if(payment==0)
+        {
+            addmonth.put("Payment","Paid");
+        }
+        onpaid.child("Admin").child("AmcSubscriber").child(forr+day+key).updateChildren(addmonth);
+
+    }
+    private void fourthamc(String title,String defaultkey) {
+        String key = onpaid.child("Admin").child("AmcSubscriber").push().getKey();
+        String first,forr,forr1,day="";
+        Calendar check = Calendar.getInstance();
+        check.add(Calendar.MONTH, 12);
+        SimpleDateFormat adminformatchecking = new SimpleDateFormat("MMM");
+        SimpleDateFormat adminformat = new SimpleDateFormat("yyydd");
+        SimpleDateFormat adminformat1 = new SimpleDateFormat(" dd yyy ");
+        forr = adminformat.format(check.getTime()).toLowerCase();
+        forr1 = adminformat1.format(check.getTime()).toLowerCase();
+        first = adminformatchecking.format(check.getTime()).toUpperCase();
+
+        if(first.equals("JAN")) {
+            day="a";
+        }
+        else if(first.equals("FEB")) {
+            day="b";
+        }
+        else if(first.equals("MAR")) {
+            day="c";
+        }
+        else if(first.equals("APR")) {
+            day="d";
+        }
+        else if(first.equals("MAY")) {
+            day="e";
+        }
+        else if(first.equals("JUN")) {
+            day="f";
+        }
+        else if(first.equals("JUL")) {
+            day="g";
+        }
+        else if(first.equals("AUG")) {
+            day = "h";
+        }
+        else if(first.equals("SEP")) {
+            first="i";
+        }
+        else if(first.equals("OCT")) {
+            day="j";
+        }
+        else if(first.equals("NOV")) {
+            day="k";
+        }
+        else if(first.equals("DEC")) {
+            day="l";
+        }
+
+        HashMap<String,Object> addmonth = new HashMap<>();
+        addmonth.put("Service",title);
+        addmonth.put("Latitude",String.valueOf(orderLat));
+        addmonth.put("Longitude",String.valueOf(orderLng));
+        addmonth.put("Number",Number);
+        addmonth.put("Key",defaultkey);
+        addmonth.put("Serviceday","FourthService");
+        addmonth.put("Date",first + forr1);
+        addmonth.put("User",mAuth.getCurrentUser().getUid());
+        addmonth.put("Orderkey",Orderkey);
+
+        if(payment==1)
+        {
+            addmonth.put("Payment","Cash On Delivery");
+        }
+        else if(payment==0)
+        {
+            addmonth.put("Payment","Paid");
+        }
+        onpaid.child("Admin").child("AmcSubscriber").child(forr+day+key).updateChildren(addmonth);
+
+    }
+
 
 }

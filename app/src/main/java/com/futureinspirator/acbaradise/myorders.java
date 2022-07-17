@@ -84,6 +84,7 @@ public class myorders extends Fragment {
                                 break;
                             }
                         }
+
                         if((data.getKey().toString()).equals("Payment"))
                         {
                             payment = data.getValue().toString();

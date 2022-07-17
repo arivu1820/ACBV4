@@ -1,5 +1,6 @@
 package com.futureinspirator.acbaradise;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -82,7 +83,8 @@ public class fragment_cassette_faults extends Fragment {
     private DatabaseReference root = FirebaseDatabase.getInstance().getReference();
     private DatabaseReference cart = FirebaseDatabase.getInstance().getReference();
     private TextView txt_price_waterleak,txt_price_gasleak,txt_price_pcboard,txt_price_indoorcoil,txt_price_outdoorcomdenser, txt_price_remote,txt_price_stablizer ;
-
+    private  int disstringwaterleakprice,disstringgasleakprice,disstringpcboardprice,disstringindoorcoilprice,disstringoutdoorcondenserprice,disstringremoteprice,disstringstabilizerprice;
+    private TextView textView7,textView6,txt_discount_price_stablizer,txt_discount_price_pcboard,txt_discount_price_indoorcoil,txt_discount_price_outdoorcomdenser,txt_discount_price_remote;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -90,6 +92,77 @@ public class fragment_cassette_faults extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_cassette_faults, container, false);
 
+        textView7=v.findViewById(R.id.textView7);
+        textView6=v.findViewById(R.id.textView6);
+        txt_discount_price_stablizer=v.findViewById(R.id.txt_discount_price_stablizer);
+        txt_discount_price_pcboard=v.findViewById(R.id.txt_discount_price_pcboard);
+        txt_discount_price_indoorcoil=v.findViewById(R.id.txt_discount_price_indoorcoil);
+        txt_discount_price_outdoorcomdenser=v.findViewById(R.id.txt_discount_price_outdoorcomdenser);
+        txt_discount_price_remote=v.findViewById(R.id.txt_discount_price_remote);
+
+        txt_price_waterleak=v.findViewById(R.id.textView8);
+        txt_price_gasleak=v.findViewById(R.id.textView5);
+        txt_price_pcboard=v.findViewById(R.id.txt_price_pcboard);
+        txt_price_indoorcoil=v.findViewById(R.id.txt_price_indoorcoil);
+        txt_price_outdoorcomdenser=v.findViewById(R.id.txt_price_outdoorcomdenser);
+        txt_price_remote=v.findViewById(R.id.txt_price_remote);
+        txt_price_stablizer=v.findViewById(R.id.txt_price_stablizer);
+
+        cardview_waterleak1 = v.findViewById(R.id.cardview_waterleak1);
+        cardview_waterleak2 = v.findViewById(R.id.cardview_waterleak2);
+        waterleakbtn = v.findViewById(R.id.waterleakbtn);
+        addwaterleak = v.findViewById(R.id.addwaterleak);
+        subwaterleak = v.findViewById(R.id.subwaterleak);
+        txtwaterleak = v.findViewById(R.id.txtwaterleak);
+        waterleakprogressbar = v.findViewById(R.id.waterleakprogressbar);
+
+        cardview_gasleak1 = v.findViewById(R.id.cardview_gasleak1);
+        cardview_gasleak2 = v.findViewById(R.id.cardview_gasleak2);
+        gasleakbtn = v.findViewById(R.id.gasleakbtn);
+        addgasleak = v.findViewById(R.id.addgasleak);
+        subgasleak = v.findViewById(R.id.subgasleak);
+        txtgasleak = v.findViewById(R.id.txtgasleak);
+        gasleakprogressbar = v.findViewById(R.id.gasleakprogressbar);
+
+        cardview_pcboard1 = v.findViewById(R.id.cardview_pcboard1);
+        cardview_pcboard2 = v.findViewById(R.id.cardview_pcboard2);
+        pcboardbtn = v.findViewById(R.id.pcboardbtn);
+        addpcboard = v.findViewById(R.id.addpcboard);
+        subpcboard = v.findViewById(R.id.subpcboard);
+        txtpcboard = v.findViewById(R.id.txtpcboard);
+        pcboardprogressbar = v.findViewById(R.id.pcboardprogressbar);
+
+        cardview_indoorcoil1 = v.findViewById(R.id.cardview_indoorcoil1);
+        cardview_indoorcoil2 = v.findViewById(R.id.cardview_indoorcoil2);
+        indoorcoilbtn = v.findViewById(R.id.indoorcoilbtn);
+        addindoorcoil = v.findViewById(R.id.addindoorcoil);
+        subindoorcoil = v.findViewById(R.id.subindoorcoil);
+        txtindoorcoil = v.findViewById(R.id.txtindoorcoil);
+        indoorcoilprogressbar = v.findViewById(R.id.indoorcoilprogressbar);
+
+        cardview_outdoorcondenser1 = v.findViewById(R.id.cardview_outdoorcondenser1);
+        cardview_outdoorcondenser2 = v.findViewById(R.id.cardview_outdoorcondenser2);
+        outdoorcondenserbtn = v.findViewById(R.id.outdoorcondenserbtn);
+        addoutdoorcondenser = v.findViewById(R.id.addoutdoorcondenser);
+        suboutdoorcondenser = v.findViewById(R.id.suboutdoorcondenser);
+        txtoutdoorcondenser = v.findViewById(R.id.txtoutdoorcondenser);
+        outdoorcondenserprogressbar = v.findViewById(R.id.outdoorcondenserprogressbar);
+
+        cardview_remote1 = v.findViewById(R.id.cardview_remote1);
+        cardview_remote2 = v.findViewById(R.id.cardview_remote2);
+        remotebtn = v.findViewById(R.id.remotebtn);
+        addremote = v.findViewById(R.id.addremote);
+        subremote = v.findViewById(R.id.subremote);
+        txtremote = v.findViewById(R.id.txtremote);
+        remoteprogressbar = v.findViewById(R.id.remoteprogressbar);
+
+        cardview_stabilizer1 = v.findViewById(R.id.cardview_stabilizer1);
+        cardview_stabilizer2 = v.findViewById(R.id.cardview_stabilizer2);
+        stabilizerbtn = v.findViewById(R.id.stabilizerbtn);
+        addstabilizer = v.findViewById(R.id.addstabilizer);
+        substabilizer = v.findViewById(R.id.substabilizer);
+        txtstabilizer = v.findViewById(R.id.txtstabilizer);
+        stabilizerprogressbar = v.findViewById(R.id.stabilizerprogressbar);
 
         root.addValueEventListener(new ValueEventListener() {
             @Override
@@ -117,6 +190,38 @@ public class fragment_cassette_faults extends Fragment {
                 outdoorcondenserprice = Integer.parseInt(stringoutdoorcondenserprice);
                 remoteprice = Integer.parseInt(stringremoteprice);
                 stabilizerprice = Integer.parseInt(stringstabilizerprice);
+                disstringwaterleakprice = waterleakprice + 100;
+                disstringgasleakprice = gasleakprice + 100;
+                disstringpcboardprice = pcboardprice + 100;
+                disstringindoorcoilprice = indoorcoilprice + 100;
+                disstringoutdoorcondenserprice = outdoorcondenserprice + 100;
+                disstringremoteprice = remoteprice + 100;
+                disstringstabilizerprice = stabilizerprice + 100;
+
+
+
+                textView7.setText(""+disstringwaterleakprice);
+                textView7.setPaintFlags(textView7.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                textView6.setText(""+disstringgasleakprice);
+                textView6.setPaintFlags(textView6.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_stablizer.setText(""+disstringstabilizerprice);
+                txt_discount_price_stablizer.setPaintFlags(txt_discount_price_stablizer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_pcboard.setText(""+disstringpcboardprice);
+                txt_discount_price_pcboard.setPaintFlags(txt_discount_price_pcboard.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
+                txt_discount_price_indoorcoil.setText(""+disstringindoorcoilprice);
+                txt_discount_price_indoorcoil.setPaintFlags(txt_discount_price_indoorcoil.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_outdoorcomdenser.setText(""+disstringoutdoorcondenserprice);
+                txt_discount_price_outdoorcomdenser.setPaintFlags(txt_discount_price_outdoorcomdenser.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_remote.setText(""+disstringremoteprice);
+                txt_discount_price_remote.setPaintFlags(txt_discount_price_remote.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
 
             }
 
@@ -282,62 +387,6 @@ public class fragment_cassette_faults extends Fragment {
         });
 
 
-
-        cardview_waterleak1 = v.findViewById(R.id.cardview_waterleak1);
-        cardview_waterleak2 = v.findViewById(R.id.cardview_waterleak2);
-        waterleakbtn = v.findViewById(R.id.waterleakbtn);
-        addwaterleak = v.findViewById(R.id.addwaterleak);
-        subwaterleak = v.findViewById(R.id.subwaterleak);
-        txtwaterleak = v.findViewById(R.id.txtwaterleak);
-        waterleakprogressbar = v.findViewById(R.id.waterleakprogressbar);
-
-        cardview_gasleak1 = v.findViewById(R.id.cardview_gasleak1);
-        cardview_gasleak2 = v.findViewById(R.id.cardview_gasleak2);
-        gasleakbtn = v.findViewById(R.id.gasleakbtn);
-        addgasleak = v.findViewById(R.id.addgasleak);
-        subgasleak = v.findViewById(R.id.subgasleak);
-        txtgasleak = v.findViewById(R.id.txtgasleak);
-        gasleakprogressbar = v.findViewById(R.id.gasleakprogressbar);
-
-        cardview_pcboard1 = v.findViewById(R.id.cardview_pcboard1);
-        cardview_pcboard2 = v.findViewById(R.id.cardview_pcboard2);
-        pcboardbtn = v.findViewById(R.id.pcboardbtn);
-        addpcboard = v.findViewById(R.id.addpcboard);
-        subpcboard = v.findViewById(R.id.subpcboard);
-        txtpcboard = v.findViewById(R.id.txtpcboard);
-        pcboardprogressbar = v.findViewById(R.id.pcboardprogressbar);
-
-        cardview_indoorcoil1 = v.findViewById(R.id.cardview_indoorcoil1);
-        cardview_indoorcoil2 = v.findViewById(R.id.cardview_indoorcoil2);
-        indoorcoilbtn = v.findViewById(R.id.indoorcoilbtn);
-        addindoorcoil = v.findViewById(R.id.addindoorcoil);
-        subindoorcoil = v.findViewById(R.id.subindoorcoil);
-        txtindoorcoil = v.findViewById(R.id.txtindoorcoil);
-        indoorcoilprogressbar = v.findViewById(R.id.indoorcoilprogressbar);
-
-        cardview_outdoorcondenser1 = v.findViewById(R.id.cardview_outdoorcondenser1);
-        cardview_outdoorcondenser2 = v.findViewById(R.id.cardview_outdoorcondenser2);
-        outdoorcondenserbtn = v.findViewById(R.id.outdoorcondenserbtn);
-        addoutdoorcondenser = v.findViewById(R.id.addoutdoorcondenser);
-        suboutdoorcondenser = v.findViewById(R.id.suboutdoorcondenser);
-        txtoutdoorcondenser = v.findViewById(R.id.txtoutdoorcondenser);
-        outdoorcondenserprogressbar = v.findViewById(R.id.outdoorcondenserprogressbar);
-
-        cardview_remote1 = v.findViewById(R.id.cardview_remote1);
-        cardview_remote2 = v.findViewById(R.id.cardview_remote2);
-        remotebtn = v.findViewById(R.id.remotebtn);
-        addremote = v.findViewById(R.id.addremote);
-        subremote = v.findViewById(R.id.subremote);
-        txtremote = v.findViewById(R.id.txtremote);
-        remoteprogressbar = v.findViewById(R.id.remoteprogressbar);
-
-        cardview_stabilizer1 = v.findViewById(R.id.cardview_stabilizer1);
-        cardview_stabilizer2 = v.findViewById(R.id.cardview_stabilizer2);
-        stabilizerbtn = v.findViewById(R.id.stabilizerbtn);
-        addstabilizer = v.findViewById(R.id.addstabilizer);
-        substabilizer = v.findViewById(R.id.substabilizer);
-        txtstabilizer = v.findViewById(R.id.txtstabilizer);
-        stabilizerprogressbar = v.findViewById(R.id.stabilizerprogressbar);
 
 
         waterleakbtn.setOnClickListener(new View.OnClickListener() {

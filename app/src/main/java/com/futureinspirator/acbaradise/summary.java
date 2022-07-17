@@ -4007,7 +4007,7 @@ public class summary extends AppCompatActivity {
         placelocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(summary.this, checkout.class);
+                Intent intent = new Intent(summary.this, Booking.class);
                 intent.putExtra("payment",payment);
                 startActivity(intent);
                 finish();

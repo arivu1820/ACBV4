@@ -36,6 +36,7 @@ public class login extends AppCompatActivity {
     private TextView incode;
     private FrameLayout frame;
     private Handler delay;
+    private Handler handler;
 
 
     @Override
@@ -75,9 +76,15 @@ public class login extends AppCompatActivity {
                 }
                 else
                 {
-
-                            closekeyboard();
+                    et.setEnabled(false);
+                    closekeyboard();
+                    final Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
                             numberlengthverified();
+                        }
+                    }, 1500);
 
                 }
             }
@@ -116,51 +123,55 @@ public class login extends AppCompatActivity {
         }
     }
 
-    private void numberlengthverified()
+    public void numberlengthverified()
     {
-        frame.setVisibility(View.INVISIBLE);
-        progressBar.setVisibility(View.VISIBLE);
+                    frame.setVisibility(View.INVISIBLE);
+                    progressBar.setVisibility(View.VISIBLE);
+                    et.setEnabled(true);
 
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                "+91"+ et.getText().toString(),
-                30,
-                TimeUnit.SECONDS,
-                login.this,
-                new PhoneAuthProvider.OnVerificationStateChangedCallbacks()
-                {
-                    @Override
-                    public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential)
-                    {
-                        progressBar.setVisibility(View.INVISIBLE);
-                        frame.setVisibility(View.VISIBLE);
-                    }
+                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
+                            "+91"+ et.getText().toString(),
+                            30,
+                            TimeUnit.SECONDS,
+                            login.this,
+                            new PhoneAuthProvider.OnVerificationStateChangedCallbacks()
+                            {
+                                @Override
+                                public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential)
+                                {
+                                    progressBar.setVisibility(View.INVISIBLE);
+                                    frame.setVisibility(View.VISIBLE);
+                                }
 
-                    @Override
-                    public void onVerificationFailed(@NonNull FirebaseException e)
-                    {
-                        progressBar.setVisibility(View.INVISIBLE);
-                        frame.setVisibility(View.VISIBLE);
-                        Toast.makeText(login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
+                                @Override
+                                public void onVerificationFailed(@NonNull FirebaseException e)
+                                {
+                                    progressBar.setVisibility(View.INVISIBLE);
+                                    frame.setVisibility(View.VISIBLE);
+                                    Toast.makeText(login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
 
-                    @Override
-                    public void onCodeSent(@NonNull String otpcode, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken)
-                    {
-                        super.onCodeSent(otpcode, forceResendingToken);
-                        progressBar.setVisibility(View.INVISIBLE);
-                        frame.setVisibility(View.VISIBLE);
-                        Intent intent = new Intent(login.this,sendotp.class);
-                        intent.putExtra("Number",number);
-                        intent.putExtra("OTP",otpcode);
-                        startActivity(intent);
-                        SharedPreferences preferences = getSharedPreferences("ACBARADISE.v3",MODE_PRIVATE);
-                        String checkbox = preferences.getString("remember.v3","");
-                        if (checkbox.equals("true")) {
-                            finish();
-                        }
-                    }
-                });
+                                @Override
+                                public void onCodeSent(@NonNull String otpcode, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken)
+                                {
+                                    super.onCodeSent(otpcode, forceResendingToken);
+                                    progressBar.setVisibility(View.INVISIBLE);
+                                    frame.setVisibility(View.VISIBLE);
+                                    Intent intent = new Intent(login.this,sendotp.class);
+                                    intent.putExtra("Number",number);
+                                    intent.putExtra("OTP",otpcode);
+                                    startActivity(intent);
+                                    SharedPreferences preferences = getSharedPreferences("ACBARADISE.v3",MODE_PRIVATE);
+                                    String checkbox = preferences.getString("remember.v3","");
+                                    if (checkbox.equals("true")) {
+                                        finish();
+                                    }
+                                }
+                            });
+
 
 
     }
+
+
 }

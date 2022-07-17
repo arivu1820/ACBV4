@@ -1,6 +1,7 @@
 package com.futureinspirator.acbaradise;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -45,7 +46,8 @@ public class generalservicepage extends AppCompatActivity {
     private TextView txt_price_split,txt_price_window,txt_price_cassette;
     private FirebaseAuth mAuth= FirebaseAuth.getInstance();
     private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference().child(mAuth.getCurrentUser().getUid());
-
+    private TextView textView7,txt_discount_price_windowss_waterwash,txt_discount_price_cassettess_waterwash;
+    private int dissplitprice,diswindowprice,discassetteprice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +82,21 @@ public class generalservicepage extends AppCompatActivity {
                 splitprice = Integer.parseInt(stringsplitprice);
                 windowprice = Integer.parseInt(stringwindowprice);
                 cassetteprice = Integer.parseInt(stringcassetteprice);
+
+                dissplitprice = splitprice + 100;
+                diswindowprice=windowprice + 100;
+                discassetteprice=cassetteprice + 100;
+
+                textView7.setText(""+dissplitprice);
+                textView7.setPaintFlags(textView7.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+//
+                txt_discount_price_windowss_waterwash.setText(""+diswindowprice);
+                txt_discount_price_windowss_waterwash.setPaintFlags(txt_discount_price_windowss_waterwash.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
+//
+                txt_discount_price_cassettess_waterwash.setText(""+discassetteprice);
+                txt_discount_price_cassettess_waterwash.setPaintFlags(txt_discount_price_cassettess_waterwash.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
             }
 
             @Override
@@ -243,7 +260,12 @@ public class generalservicepage extends AppCompatActivity {
             }
         });
 
-        txt_price_split=findViewById(R.id.textView8);
+        textView7 =findViewById(R.id.textView7);
+        txt_discount_price_windowss_waterwash=findViewById(R.id.txt_discount_price_windowss_waterwash);
+        txt_discount_price_cassettess_waterwash=findViewById(R.id.txt_discount_price_cassettess_waterwash);
+
+
+                txt_price_split=findViewById(R.id.textView8);
         txt_price_window=findViewById(R.id.txt_price_windowss_waterwash);
         txt_price_cassette=findViewById(R.id.txt_price_cassettess_waterwash);
 

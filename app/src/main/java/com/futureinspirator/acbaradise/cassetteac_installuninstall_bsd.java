@@ -1,5 +1,6 @@
 package com.futureinspirator.acbaradise;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -76,7 +77,8 @@ public class cassetteac_installuninstall_bsd extends BottomSheetDialogFragment {
 
     private DatabaseReference discount = FirebaseDatabase.getInstance().getReference().child("Products").child("Installuninstall").child(Category).child("Discount");
     private TextView txt_originalprice_install_cassetteac,txt_originalprice_uninstall,txt_originalprice_combo;
-
+private TextView   txt_discount_price_install_cassetteac,txt_discount_price_uninstall,txt_discount_price_combo;
+private int disstring_install_price,disstring_uninstall_price,disstring_combo_price;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -89,6 +91,11 @@ public class cassetteac_installuninstall_bsd extends BottomSheetDialogFragment {
                 String string_install_price = snapshot.child("Products").child("Installuninstall").child(Category).child("Price").child("Install").getValue().toString();
                 installprice = Integer.parseInt(string_install_price);
                 txt_originalprice_install_cassetteac.setText(""+string_install_price);
+
+                disstring_install_price=installprice + 100;
+                txt_discount_price_install_cassetteac.setText(""+disstring_install_price);
+                txt_discount_price_install_cassetteac.setPaintFlags(txt_discount_price_install_cassetteac.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
 
             }
 
@@ -124,6 +131,11 @@ public class cassetteac_installuninstall_bsd extends BottomSheetDialogFragment {
                 uninstallprice = Integer.parseInt(string_uninstall_price);
                 txt_originalprice_uninstall.setText(""+string_uninstall_price);
 
+                disstring_uninstall_price=uninstallprice + 100;
+                txt_discount_price_uninstall.setText(""+disstring_uninstall_price);
+                txt_discount_price_uninstall.setPaintFlags(txt_discount_price_uninstall.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
             }
 
             @Override
@@ -156,6 +168,11 @@ public class cassetteac_installuninstall_bsd extends BottomSheetDialogFragment {
                 String string_combo_price = snapshot.child("Products").child("Installuninstall").child(Category).child("Price").child("Combo").getValue().toString();
                 comboprice = Integer.parseInt(string_combo_price);
                 txt_originalprice_combo.setText(""+string_combo_price);
+
+                disstring_combo_price=comboprice + 100;
+                txt_discount_price_combo.setText(""+disstring_combo_price);
+                txt_discount_price_combo.setPaintFlags(txt_discount_price_combo.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
             }
 
             @Override
@@ -202,7 +219,9 @@ public class cassetteac_installuninstall_bsd extends BottomSheetDialogFragment {
 
 
 
-
+        txt_discount_price_install_cassetteac=v.findViewById(R.id.txt_discount_price_install_cassetteac);
+        txt_discount_price_uninstall=v.findViewById(R.id.txt_discount_price_uninstall);
+        txt_discount_price_combo=v.findViewById(R.id.txt_discount_price_combo);
 
         txt_originalprice_install_cassetteac=v.findViewById(R.id.txt_originalprice_install_cassetteac);
         txt_originalprice_uninstall=v.findViewById(R.id.txt_originalprice_uninstall);

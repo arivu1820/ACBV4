@@ -6,32 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-
-
-    <FrameLayout
-        android:id="@+id/framelayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </FrameLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:visibility="visible"
-        android:id="@+id/bottom_navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_menu"
-        android:background="@color/white"/>
-
-
     <RelativeLayout
         android:id="@+id/relative1"
         android:visibility="gone"
@@ -595,7 +569,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="65dp"
+            android:layout_marginBottom="30dp"
             app:cardCornerRadius="50dp"
             app:cardElevation="50dp">
 

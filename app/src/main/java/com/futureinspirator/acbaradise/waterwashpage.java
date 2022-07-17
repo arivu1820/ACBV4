@@ -2,6 +2,7 @@ package com.futureinspirator.acbaradise;
 
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -45,9 +46,9 @@ public class waterwashpage extends AppCompatActivity {
     private FirebaseAuth mAuth= FirebaseAuth.getInstance();
     private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference().child(mAuth.getCurrentUser().getUid());
     private TextView cartt;
-
+private TextView textView7,txt_discount_price_windowss_waterwash,txt_discount_price_cassettess_waterwash,txt_discount_price_split360waterwash,txt_discount_price_cassette360waterwash;
     private TextView txt_price_split_waterwash,txt_price_windowss_waterwash,txt_price_cassettess_waterwash,txt_price_split360_waterwash,txt_price_cassette360_waterwash;
-
+    private int disstringsplitssprice,disstringwindowssprice,disstringcassettessprice,disstringsplit360price,disstringcassette360price;
 
 
     @Override
@@ -81,20 +82,46 @@ public class waterwashpage extends AppCompatActivity {
                 stringcassettessprice = snapshot.child("CassetteSSAC").getValue().toString();
                 stringsplit360price = snapshot.child("Split360AC").getValue().toString();
                 stringcassette360price = snapshot.child("Cassette360AC").getValue().toString();
-
+//main price
                 txt_price_split_waterwash.setText(""+stringsplitssprice);
                 txt_price_cassettess_waterwash.setText(""+stringcassettessprice);
                 txt_price_windowss_waterwash.setText(""+stringwindowssprice);
                 txt_price_split360_waterwash.setText(""+stringsplit360price);
                 txt_price_cassette360_waterwash.setText(""+stringcassette360price);
 
-
-
                 splitssprice = Integer.parseInt(stringsplitssprice);
                 windowssprice = Integer.parseInt(stringwindowssprice);
                 cassettessprice = Integer.parseInt(stringcassettessprice);
                 split360price = Integer.parseInt(stringsplit360price);
                 cassette360price = Integer.parseInt(stringcassette360price);
+
+                    disstringsplitssprice= splitssprice + 100;
+                     disstringwindowssprice=windowssprice + 100;
+                    disstringcassettessprice=cassettessprice + 100;
+                     disstringsplit360price=split360price + 100;
+                     disstringcassette360price=cassette360price + 100;
+
+
+                 //strike price
+
+                 textView7.setText(""+disstringsplitssprice);
+                textView7.setPaintFlags(textView7.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                 txt_discount_price_windowss_waterwash.setText(""+disstringwindowssprice);
+                txt_discount_price_windowss_waterwash.setPaintFlags(txt_discount_price_windowss_waterwash.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_cassettess_waterwash.setText(""+disstringcassettessprice);
+                txt_discount_price_cassettess_waterwash.setPaintFlags(txt_discount_price_cassettess_waterwash.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_split360waterwash.setText(""+disstringsplit360price);
+                txt_discount_price_split360waterwash.setPaintFlags(txt_discount_price_split360waterwash.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_cassette360waterwash.setText(""+disstringcassette360price);
+                txt_discount_price_cassette360waterwash.setPaintFlags(txt_discount_price_cassette360waterwash.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
+
+
             }
 
             @Override
@@ -257,6 +284,11 @@ public class waterwashpage extends AppCompatActivity {
             }
         });
 
+        textView7=findViewById(R.id.textView7);
+                txt_discount_price_windowss_waterwash=findViewById(R.id.txt_discount_price_windowss_waterwash);
+        txt_discount_price_cassettess_waterwash=findViewById(R.id.txt_discount_price_cassettess_waterwash);
+                txt_discount_price_split360waterwash=findViewById(R.id.txt_discount_price_split360waterwash);
+        txt_discount_price_cassette360waterwash=findViewById(R.id.txt_discount_price_cassette360waterwash);
 
         txt_price_split_waterwash=findViewById(R.id.textView8);
         txt_price_cassettess_waterwash=findViewById(R.id.txt_price_cassettess_waterwash);
@@ -312,7 +344,7 @@ public class waterwashpage extends AppCompatActivity {
 
         splitacprogressbar = findViewById(R.id.splitssacprogressbar);
         windowacprogressbar = findViewById(R.id.windowssacprogressbar);
-//        cassetteacprogressbar = findViewById(R.id.cassetteacprogressbar);
+        cassetteacprogressbar = findViewById(R.id.cassettessacprogressbar);
         split360acprogressbar = findViewById(R.id.split360acprogressbar);
         cassette360acprogressbar = findViewById(R.id.cassette360acprogressbar);
 
@@ -1011,6 +1043,7 @@ public class waterwashpage extends AppCompatActivity {
             });
         }
     }
+
     /// WATER WASH
 
 

@@ -26,10 +26,11 @@
                     android:layout_height="match_parent">
 
 
-                    <VideoView
+                    <ImageView
                         android:id="@+id/video"
                         android:layout_width="match_parent"
-                        android:layout_height="230dp" />
+                        android:layout_height="230dp"
+                        android:src="@drawable/waterwash"/>
 
                     <TextView
                         android:id="@+id/txt_general_Service"
@@ -586,20 +587,20 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_rupee_cassettess"
                                 android:layout_width="29dp"
                                 android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/indian_currency"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_star_cassettess" />
 
                             <TextView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/txt_discount_price_cassettess_waterwash"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="4̶9̶9̶"
                                 app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_cassettess"
@@ -629,10 +630,10 @@
                                 app:layout_constraintTop_toTopOf="@+id/imageView_rupee_cassettess" />
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_cassettess_pin"
                                 android:layout_width="29dp"
                                 android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="8dp"
                                 android:src="@drawable/ic_baseline_bookmark_24"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -640,11 +641,11 @@
 
 
                             <TextView
-                                android:layout_marginTop="15dp"
                                 android:id="@+id/textView_cassettess"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="50dp"
+                                android:layout_marginTop="15dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="Extra 100 OFF if Premimium \nMembership is taken"
                                 app:layout_constraintBottom_toBottomOf="@+id/imageView_cassettess_pin"
@@ -761,20 +762,20 @@
                                 app:layout_constraintTop_toTopOf="@+id/imageView_star_cassettess" />
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_star_cassettess"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/ic_baseline_star_rate_24"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/topic3" />
 
                             <TextView
-                                android:layout_marginLeft="5dp"
                                 android:id="@+id/topic3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="CASSETTE AC - SINGLE SIDE"
@@ -817,20 +818,20 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_rupee_split360"
                                 android:layout_width="29dp"
                                 android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/indian_currency"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_star_split360" />
 
                             <TextView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/txt_discount_price_split360waterwash"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="4̶9̶9̶"
                                 app:layout_constraintBottom_toBottomOf="@+id/imageView_rupee_split360"
@@ -860,10 +861,10 @@
                                 app:layout_constraintTop_toTopOf="@+id/imageView_rupee_split360" />
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_split360_pin"
                                 android:layout_width="29dp"
                                 android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/ic_baseline_bookmark_24"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -871,11 +872,11 @@
 
 
                             <TextView
-                                android:layout_marginTop="15dp"
                                 android:id="@+id/textView_split360"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="50dp"
+                                android:layout_marginTop="15dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="Extra 100 OFF if Premimium \nMembership is taken"
                                 app:layout_constraintBottom_toBottomOf="@+id/imageView_split360_pin"
@@ -992,10 +993,10 @@
                                 app:layout_constraintTop_toTopOf="@+id/imageView_star_split360" />
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_star_split360"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/ic_baseline_star_rate_24"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -1003,10 +1004,10 @@
 
                             <TextView
 
-                                android:layout_marginLeft="5dp"
                                 android:id="@+id/topic4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="SPLIT AC - 360 DEGREE"
@@ -1049,10 +1050,10 @@
                             android:layout_height="match_parent">
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_rupee_cassette360"
                                 android:layout_width="29dp"
                                 android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/indian_currency"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -1092,10 +1093,10 @@
                                 app:layout_constraintTop_toTopOf="@+id/imageView_rupee_cassette360" />
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_cassette360_pin"
                                 android:layout_width="29dp"
                                 android:layout_height="28dp"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/ic_baseline_bookmark_24"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -1103,11 +1104,11 @@
 
 
                             <TextView
-                                android:layout_marginTop="15dp"
                                 android:id="@+id/textView_cassette360"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="50dp"
+                                android:layout_marginTop="15dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="Extra 100 OFF if Premimium \nMembership is taken"
                                 app:layout_constraintBottom_toBottomOf="@+id/imageView_cassette360_pin"
@@ -1223,20 +1224,20 @@
                                 app:layout_constraintTop_toTopOf="@+id/imageView_star_cassette360" />
 
                             <ImageView
-                                android:layout_marginLeft="10dp"
                                 android:id="@+id/imageView_star_cassette360"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
                                 android:layout_marginTop="10dp"
                                 android:src="@drawable/ic_baseline_star_rate_24"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/topic5" />
 
                             <TextView
-                                android:layout_marginLeft="5dp"
                                 android:id="@+id/topic5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
                                 android:layout_marginTop="10dp"
                                 android:fontFamily="@font/metropolis"
                                 android:text="CASSETTE AC - 360 DEGREE"
@@ -1275,178 +1276,178 @@
                             android:orientation="vertical">
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Filter Washing"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Grill Washing"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Indoor Coil Cleaning"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Adding Fragrance Spray To Indoor"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Adding Fragrance Spray To Indoor"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Outdoor coil And Fan Washing With Pressure Pump"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Gas Checking"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_marginTop="10dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:layout_marginTop="10dp"
                                 android:orientation="horizontal">
 
                                 <ImageView
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:src="@drawable/ic_baseline_event_note_24"/>
+                                    android:src="@drawable/ic_baseline_event_note_24" />
 
                                 <TextView
-                                    android:layout_marginLeft="10dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:textSize="20dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
                                     android:text="Anti Viral Spray"
                                     android:textColor="#808080"
-                                    android:layout_gravity="center_vertical"/>
+                                    android:textSize="20dp" />
 
                             </LinearLayout>
 
@@ -1672,7 +1673,7 @@
     </RelativeLayout>
 
     <FrameLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/frontloadingpage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

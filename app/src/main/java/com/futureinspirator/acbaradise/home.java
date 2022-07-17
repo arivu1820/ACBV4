@@ -102,8 +102,6 @@ public class home extends Fragment implements LocationListener {
 
         client = LocationServices.getFusedLocationProviderClient(getActivity());
 
-        bottomNavigationView = (BottomNavigationView) v.findViewById(R.id.bottom_navigation_view);
-
         permium1 = v.findViewById(R.id.permium1);
 
         relative1 = v.findViewById(R.id.relative1);

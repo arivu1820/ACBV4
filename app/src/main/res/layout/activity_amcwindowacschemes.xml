@@ -3,9 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".amcwindowacschemes"
-    android:background="@drawable/gradient">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:id="@+id/main_scrollview"
@@ -18,14 +16,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <VideoView
+            <ImageView
                 android:id="@+id/video"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp" />
+                android:layout_marginEnd="0dp"
+                android:src="@drawable/windowac"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -35,7 +34,8 @@
                 android:text="Window AC"
                 android:textColor="@color/black"
                 android:textSize="30dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/metropolis"/>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/mainparent_cardview"
@@ -47,8 +47,7 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/mainparent_constraint"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient">
+                    android:layout_height="match_parent">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/scheme1_cardview"
@@ -77,7 +76,8 @@
                                 android:text="Scheme 1"
                                 android:textColor="@color/black"
                                 android:textSize="30dp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:fontFamily="@font/metropolis"/>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:id="@+id/scheme1_dropdownconstraint"
@@ -101,7 +101,18 @@
                                         android:layout_height="wrap_content"
                                         android:gravity="center_horizontal"
                                         android:text="With Spare"
-                                        android:textSize="20dp" />
+                                        android:textSize="20dp"
+                                        android:fontFamily="@font/metropolis"/>
+
+                                    <TextView
+                                        android:id="@+id/textView68"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView"
+                                        android:layout_marginLeft="23dp"
+                                        android:layout_marginTop="27dp"
+                                        android:fontFamily="@font/metropolis"/>
+
 
                                     <androidx.cardview.widget.CardView
                                         android:id="@+id/scheme1_withspareaddbtn_cardview1"
@@ -123,9 +134,10 @@
                                             android:backgroundTint="#EC165F"
                                             android:text="ADD"
                                             android:textColor="@color/white"
-                                            android:textSize="20dp"
+                                            android:textSize="18dp"
                                             android:textStyle="bold"
-                                            tools:ignore="TouchTargetSizeCheck" />
+                                            tools:ignore="TouchTargetSizeCheck"
+                                            android:fontFamily="@font/metropolis"/>
                                     </androidx.cardview.widget.CardView>
 
                                     <androidx.cardview.widget.CardView
@@ -197,7 +209,19 @@
                                         android:layout_height="wrap_content"
                                         android:gravity="center_horizontal"
                                         android:text="Without Spare"
-                                        android:textSize="20dp" />
+                                        android:textSize="20dp"
+                                        android:fontFamily="@font/metropolis"/>
+
+                                    <TextView
+                                        android:id="@+id/textView65"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView"
+                                        android:layout_marginLeft="40dp"
+                                        android:layout_marginTop="25dp"
+                                        android:fontFamily="@font/metropolis"/>
+
+
 
                                     <androidx.cardview.widget.CardView
                                         android:id="@+id/scheme1_withoutspareaddbtn_cardview1"
@@ -219,9 +243,10 @@
                                             android:backgroundTint="#EC165F"
                                             android:text="ADD"
                                             android:textColor="@color/white"
-                                            android:textSize="20dp"
+                                            android:textSize="18dp"
                                             android:textStyle="bold"
-                                            tools:ignore="TouchTargetSizeCheck" />
+                                            tools:ignore="TouchTargetSizeCheck"
+                                            android:fontFamily="@font/metropolis"/>
 
                                     </androidx.cardview.widget.CardView>
 
@@ -276,6 +301,16 @@
 
                                 </androidx.cardview.widget.CardView>
 
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/scheme1_withoutsparecardview" />
+
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -287,7 +322,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="200dp"
-                            android:visibility="gone"
                             app:cardElevation="0dp">
 
 
@@ -304,7 +338,8 @@
                                     android:textSize="25dp"
                                     android:text="BENEFITS"
                                     android:gravity="center_horizontal"
-                                    android:layout_marginBottom="10dp"/>
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -312,7 +347,9 @@
                                     android:text="Customizable Service Dates"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -320,7 +357,9 @@
                                     android:text="4 - Services For A Year (3 - Months Once)"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -328,7 +367,9 @@
                                     android:text="All Services Are General Service"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -336,7 +377,9 @@
                                     android:text="Filter Cleaning"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -344,7 +387,9 @@
                                     android:text="Indoor Coil Washing With Pressure Pump"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -352,7 +397,9 @@
                                     android:text="Adding Fragrance To The Indoor"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -360,7 +407,9 @@
                                     android:text="Outdoor Coil (External Side) And Fan Washing With Pressure Pump"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -368,7 +417,9 @@
                                     android:text="Gas Checking"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -376,7 +427,9 @@
                                     android:text="Anti Viral Spray (Optional,Extra Rs.70/-)"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -384,7 +437,9 @@
                                     android:text="Replacement Of Any Defective Part Of AC(Only For Spare Subscription)"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                             </LinearLayout>
 
@@ -419,7 +474,8 @@
                                 android:text="Scheme 2"
                                 android:textColor="@color/black"
                                 android:textSize="30dp"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:fontFamily="@font/metropolis"/>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:id="@+id/scheme2_dropdownconstraint"
@@ -443,7 +499,18 @@
                                         android:layout_height="wrap_content"
                                         android:gravity="center_horizontal"
                                         android:text="With Spare"
-                                        android:textSize="20dp" />
+                                        android:textSize="20dp"
+                                        android:fontFamily="@font/metropolis"/>
+
+                                    <TextView
+                                        android:id="@+id/textView69"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView"
+                                        android:layout_marginLeft="23dp"
+                                        android:layout_marginTop="27dp"
+                                        android:fontFamily="@font/metropolis"/>
+
 
                                     <androidx.cardview.widget.CardView
                                         android:id="@+id/scheme2_withspareaddbtn_cardview1"
@@ -465,9 +532,10 @@
                                             android:backgroundTint="#EC165F"
                                             android:text="ADD"
                                             android:textColor="@color/white"
-                                            android:textSize="20dp"
+                                            android:textSize="18dp"
                                             android:textStyle="bold"
-                                            tools:ignore="TouchTargetSizeCheck" />
+                                            tools:ignore="TouchTargetSizeCheck"
+                                            android:fontFamily="@font/metropolis"/>
                                     </androidx.cardview.widget.CardView>
 
                                     <androidx.cardview.widget.CardView
@@ -539,7 +607,18 @@
                                         android:layout_height="wrap_content"
                                         android:gravity="center_horizontal"
                                         android:text="Without Spare"
-                                        android:textSize="20dp" />
+                                        android:textSize="20dp"
+                                        android:fontFamily="@font/metropolis"/>
+
+                                    <TextView
+                                        android:id="@+id/textView70"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="TextView"
+                                        android:layout_marginLeft="40dp"
+                                        android:layout_marginTop="25dp"
+                                        android:fontFamily="@font/metropolis"/>
+
 
                                     <androidx.cardview.widget.CardView
                                         android:id="@+id/scheme2_withoutspareaddbtn_cardview1"
@@ -561,9 +640,10 @@
                                             android:backgroundTint="#EC165F"
                                             android:text="ADD"
                                             android:textColor="@color/white"
-                                            android:textSize="20dp"
+                                            android:textSize="18dp"
                                             android:textStyle="bold"
-                                            tools:ignore="TouchTargetSizeCheck" />
+                                            tools:ignore="TouchTargetSizeCheck"
+                                            android:fontFamily="@font/metropolis"/>
 
                                     </androidx.cardview.widget.CardView>
 
@@ -618,6 +698,16 @@
 
                                 </androidx.cardview.widget.CardView>
 
+                                <ImageView
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:src="@drawable/ic_baseline_arrow_drop_down_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/scheme2_withoutsparecardview" />
+
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -629,7 +719,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="200dp"
-                            android:visibility="gone"
                             app:cardElevation="0dp">
 
                             <LinearLayout
@@ -645,7 +734,8 @@
                                     android:textSize="25dp"
                                     android:text="BENEFITS"
                                     android:gravity="center_horizontal"
-                                    android:layout_marginBottom="10dp"/>
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -653,7 +743,9 @@
                                     android:text="Customizable Service Dates"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -661,7 +753,9 @@
                                     android:text="4 - Services For A Year (3 - Months Once)"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -669,7 +763,9 @@
                                     android:text="3 - General Service And 1 - 360degree Water Wash"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -677,7 +773,10 @@
                                     android:text="Blower Cleaning"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"
+                                    />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -685,7 +784,9 @@
                                     android:text="Filter Cleaning"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -693,7 +794,9 @@
                                     android:text="Indoor Coil Washing With Pressure Pump"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -701,7 +804,9 @@
                                     android:text="Adding Fragrance To The Indoor"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -709,7 +814,9 @@
                                     android:text="Outdoor Coil (External Side) And Fan Washing With Pressure Pump"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -717,7 +824,9 @@
                                     android:text="Gas Checking"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -725,7 +834,9 @@
                                     android:text="Anti Viral Spray (Optional,Extra Rs.70/-)"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -733,7 +844,9 @@
                                     android:text="Replacement Of Any Defective Part Of AC(Only For Spare Subscription)"
                                     android:textColor="#808080"
                                     android:textStyle="bold"
-                                    android:textSize="15dp"/>
+                                    android:textSize="15dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/metropolis"/>
 
                             </LinearLayout>
 
@@ -761,8 +874,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/purple">
+            android:layout_height="match_parent">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -853,28 +965,29 @@
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
-    <FrameLayout
-        android:visibility="visible"
-        android:id="@+id/frontloadingpage"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
+    <!--    <FrameLayout-->
+    <!--        android:visibility="visible"-->
+    <!--        android:id="@+id/frontloadingpage"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@color/white">-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
 
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:indeterminateTint="@color/black"/>
+    <!--            <ProgressBar-->
+    <!--                android:visibility="gone"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                android:indeterminateTint="@color/black"/>-->
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-    </FrameLayout>
+    <!--    </FrameLayout>-->
 
 </RelativeLayout>

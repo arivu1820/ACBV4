@@ -1,5 +1,6 @@
 package com.futureinspirator.acbaradise;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -83,12 +84,13 @@ public class fragment_split_faults extends Fragment {
     private DatabaseReference cart = FirebaseDatabase.getInstance().getReference();
 
     private TextView txt_price_waterleak,txt_price_gasleak,txt_price_pcboard,txt_price_indoorcoil,txt_price_outdoorcomdenser, txt_price_remote,txt_price_stablizer ;
-
+    private  int disstringwaterleakprice,disstringgasleakprice,disstringpcboardprice,disstringindoorcoilprice,disstringoutdoorcondenserprice,disstringremoteprice,disstringstabilizerprice;
+    private TextView textView7,textView6,txt_discount_price_stablizer,txt_discount_price_pcboard,txt_discount_price_indoorcoil,txt_discount_price_outdoorcomdenser,txt_discount_price_remote;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
+//
         View v = inflater.inflate(R.layout.fragment_split_faults, container, false);
 
 
@@ -120,6 +122,39 @@ public class fragment_split_faults extends Fragment {
                 outdoorcondenserprice = Integer.parseInt(stringoutdoorcondenserprice);
                 remoteprice = Integer.parseInt(stringremoteprice);
                 stabilizerprice = Integer.parseInt(stringstabilizerprice);
+
+                disstringwaterleakprice = waterleakprice + 100;
+                disstringwaterleakprice = waterleakprice + 100;
+                disstringgasleakprice = gasleakprice + 100;
+                disstringpcboardprice = pcboardprice + 100;
+                disstringindoorcoilprice = indoorcoilprice + 100;
+                disstringoutdoorcondenserprice = outdoorcondenserprice + 100;
+                disstringremoteprice = remoteprice + 100;
+                disstringstabilizerprice = stabilizerprice + 100;
+
+
+
+                textView7.setText(""+disstringwaterleakprice);
+                textView7.setPaintFlags(textView7.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                textView6.setText(""+disstringgasleakprice);
+                textView6.setPaintFlags(textView6.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_stablizer.setText(""+disstringstabilizerprice);
+                txt_discount_price_stablizer.setPaintFlags(txt_discount_price_stablizer.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_pcboard.setText(""+disstringpcboardprice);
+                txt_discount_price_pcboard.setPaintFlags(txt_discount_price_pcboard.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+
+                txt_discount_price_indoorcoil.setText(""+disstringindoorcoilprice);
+                txt_discount_price_indoorcoil.setPaintFlags(txt_discount_price_indoorcoil.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_outdoorcomdenser.setText(""+disstringoutdoorcondenserprice);
+                txt_discount_price_outdoorcomdenser.setPaintFlags(txt_discount_price_outdoorcomdenser.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+
+                txt_discount_price_remote.setText(""+disstringremoteprice);
+                txt_discount_price_remote.setPaintFlags(txt_discount_price_remote.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 
             }
 
@@ -284,6 +319,13 @@ public class fragment_split_faults extends Fragment {
             }
         });
 
+        textView7=v.findViewById(R.id.textView7);
+        textView6=v.findViewById(R.id.textView6);
+        txt_discount_price_stablizer=v.findViewById(R.id.txt_discount_price_stablizer);
+        txt_discount_price_pcboard=v.findViewById(R.id.txt_discount_price_pcboard);
+        txt_discount_price_indoorcoil=v.findViewById(R.id.txt_discount_price_indoorcoil);
+        txt_discount_price_outdoorcomdenser=v.findViewById(R.id.txt_discount_price_outdoorcomdenser);
+        txt_discount_price_remote=v.findViewById(R.id.txt_discount_price_remote);
 
         txt_price_waterleak=v.findViewById(R.id.textView8);
         txt_price_gasleak=v.findViewById(R.id.textView5);
@@ -1732,4 +1774,5 @@ public class fragment_split_faults extends Fragment {
             });
         }
     }
+
 }

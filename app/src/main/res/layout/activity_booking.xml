@@ -254,134 +254,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lineartop" />
 
-            <LinearLayout
-                android:id="@+id/textView59"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/gap">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="15dp"
-                    android:fontFamily="@font/metropolis"
-                    android:text="Tip your delivery partner"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="20dp"
-                    android:text="Support your delivery partner and make their day happy! 100% of your tip will be transferred to them."
-                    android:textColor="#979797"
-                    android:textSize="15dp" />
-
-
-            </LinearLayout>
-
-
-            <ScrollView
-                android:id="@+id/scroll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/textView59">
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <Button
-                            android:id="@+id/button"
-                            android:layout_width="70dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/tipbackground"
-                            android:text="10"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintHorizontal_chainStyle="spread"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <LinearLayout
-                            android:id="@+id/linearLayout3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="17dp"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/button3"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/button"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <Button
-                                android:id="@+id/button2"
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/tipbackground"
-                                android:text="30" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="most tipped"
-                                android:textColor="#FF7171"
-                                android:textSize="10dp" />
-
-
-                        </LinearLayout>
-
-
-                        <Button
-                            android:id="@+id/button3"
-                            android:layout_width="70dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/tipbackground"
-                            android:text="50"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/button4"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/linearLayout3"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <Button
-                            android:id="@+id/button4"
-                            android:layout_width="70dp"
-                            android:layout_height="48dp"
-                            android:background="@drawable/tipbackground"
-                            android:text="100"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/button3"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                </RelativeLayout>
-
-
-            </ScrollView>
 
 
             <androidx.cardview.widget.CardView
@@ -396,7 +268,7 @@
                 app:cardElevation="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scroll">
+                app:layout_constraintTop_toBottomOf="@+id/gap">
 
                 <ImageView
                     android:layout_width="30dp"

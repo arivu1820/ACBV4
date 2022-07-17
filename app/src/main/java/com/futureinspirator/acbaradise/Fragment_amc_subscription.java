@@ -46,12 +46,9 @@ public class Fragment_amc_subscription extends Fragment {
         callnow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:"+admin_number));
                 startActivity(intent);
-
-
             }
         });
 
