@@ -20,11 +20,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Acbaradise">
         <activity
-            android:theme="@style/Theme.Design.Light"
-        android:name=".searchview"
+            android:name=".hello"
+            android:exported="false" />
+        <activity
+            android:name=".searchview"
             android:exported="false"
             android:label="Search"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.Light" />
         <activity
             android:name=".premium"
             android:exported="false" />
@@ -34,7 +37,6 @@
         <activity
             android:name=".map"
             android:exported="false" />
-
         <activity
             android:name=".current_location"
             android:exported="false" />
