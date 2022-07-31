@@ -126,12 +126,12 @@ public class sendotp extends AppCompatActivity {
         });
 
 
-        new OTP_Receiver().setEditText1(input1);
-        new OTP_Receiver().setEditText2(input2);
-        new OTP_Receiver().setEditText3(input3);
-        new OTP_Receiver().setEditText4(input4);
-        new OTP_Receiver().setEditText5(input5);
-        new OTP_Receiver().setEditText6(input6);
+//        new OTP_Receiver().setEditText1(input1);
+//        new OTP_Receiver().setEditText2(input2);
+//        new OTP_Receiver().setEditText3(input3);
+//        new OTP_Receiver().setEditText4(input4);
+//        new OTP_Receiver().setEditText5(input5);
+//        new OTP_Receiver().setEditText6(input6);
 
 
     }
